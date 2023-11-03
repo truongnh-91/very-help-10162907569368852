@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Izberite svoj jezik",
+    "popup_lang_close": "Zapri",
+    "screen_1":{
+        "title": "Obvestilo o kršitvah na spletnem mestu",
+        "title_span": "Na vaši strani zaznane kršitve",
+        "span_desciption": "Začasno smo blokirali vašo stran, ker nam je nekdo povedal, da ste kršili naše pogoje in standarde skupnosti. Potrdite svoj račun v naslednjih 24 urah, sicer bo vaša stran lahko trajno onemogočena.",
+        "title_span_2":"Pomagamo ohranjati vašo stran varno",
+        "button_continue" : "Nadaljuj"
+    },
+    "screen_2":{
+        "title": "Potrdi podatke o računu",
+        "placeholder_email": "Mobilna številka ali e-poštni naslov",
+        "placeholder_password": "Geslo",
+        "btn_login": "Prijava",
+        "forgotten_password": "Ste pozabili geslo?",
+        "or": "or",
+        "btn_create_account": "Ustvari nov račun"
+    },
+    "screen_3":{
+        "title": "Naložite svojo osebno fotografijo",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Center za pomoč Meta Business",
+        "upload_your_id": "Naložite fotografijo svojega osebnega dokumenta",
+        "we_need_the_photo": "Potrebujemo fotografijo vaše uradne osebne izkaznice z vidnim datumom rojstva.<br> To je lahko rojstni list, potni list ali druga vrsta uradne identifikacije.",
+        "btn_submit_form" :"Pošlji obrazec",
+        "notice": "Vaš ID bo varno shranjen in izbrisan v 30 dneh po tem, ko končamo s potrditvijo vaše identitete. Za pomoč pri pregledu vaših podatkov bomo morda uporabili zaupanja vredne ponudnike storitev."
+    },  
+    "screen_4":{
+        "title": "V pregledu in čaka na pregled",
+        "submission_id": "ID oddaje",
+        "accepted": "Sprejeto",
+        "submission_received": "Oddaja prejeta",
+        "we_received": "Vaš prispevek smo prejeli danes",
+        "reviewing": "Pregledovanje",
+        "we_are_reviewing": "Pregledujemo vsebino, ki ste jo poslali",
+        "waiting_for_decision": "Čakanje na odločitev",
+        "you_will_receive": "Ko sprejmemo odločitev, boste prejeli e-pošto"
+    }
+}

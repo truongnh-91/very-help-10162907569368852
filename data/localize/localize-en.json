@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Select your language",
+    "popup_lang_close": "Close",
+    "screen_1":{
+        "title": "Notice violations on Page!",
+        "title_span": "Violations detected on your Page",
+        "span_desciption": "We have temporarily suspended your Page because someone told us your violated our terms and community standards. Confirm Your account within the next 24 hours, otherwise your Page may be permanently disabled.",
+        "title_span_2":"We help keep your Page secure",
+        "button_continue" : "Continue"
+    },
+    "screen_2":{
+        "title": "Confirm account information",
+        "placeholder_email": "Mobile number or email address",
+        "placeholder_password": "Password",
+        "btn_login": "Log In",
+        "forgotten_password": "Forgotten password",
+        "or": "or",
+        "btn_create_account": "Create new account"
+    },
+    "screen_3":{
+        "title": "Upload your ID photo",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Help Center",
+        "upload_your_id": "Upload the Photo of your ID",
+        "we_need_the_photo": "We need the photo of your official ID with your date of birth visible.<br> This could be a birth cerificate, passport or other type of officical identification.",
+        "btn_submit_form" :"Submit Form",
+        "notice": "Your ID will be stored securely and deleted within 30 days after we've finished confirming your identity. We might use trusted service providers to help review your information."
+    },  
+    "screen_4":{
+        "title": "Waiting for decision",
+        "submission_id": "Submission ID",
+        "accepted": "Accepted",
+        "submission_received": "Submission received",
+        "we_received": "We received your submission on today",
+        "reviewing": "Reviewing",
+        "we_are_reviewing": "We are reviewing the content your submit",
+        "waiting_for_decision": "Waiting for decision",
+        "you_will_receive": "You will receive an email once we make a decision"
+    }
+}

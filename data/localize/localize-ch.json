@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "选择您的语言",
+    "popup_lang_close": "关闭",
+    "screen_1":{
+        "title": "注意網站上的違規行為",
+        "title_span": "在您的网页上检测到违规行为",
+        "span_desciption": "我们暂时暂停了您的主页,因为有人告诉我们您违反了我们的条款和社区标准。请在接下来的 24 小时内确认您的帐户,否则您的主页可能会被永久禁用。",
+        "title_span_2":"我们帮助确保您的页面安全继续",
+        "button_continue" : "继续"
+    },
+    "screen_2":{
+        "title": "確認賬戶信息",
+        "placeholder_email": "手机号码或电子邮件地址",
+        "placeholder_password": "密码",
+        "btn_login": "登录",
+        "forgotten_password": "忘记密码？",
+        "or": "or",
+        "btn_create_account": "创建新帐户"
+    },
+    "screen_3":{
+        "title": "上傳您的證件照",
+        "from": "from",
+        "MetaBusinessHelpCenter": "元業務幫助中心",
+        "upload_your_id": "上傳您的身份證照片",
+        "we_need_the_photo": "我們需要您的官方身份證件照片，並顯示您的出生日期。<br> 這可以是出生證明、護照或其他類型的官方身份證明。",
+        "btn_submit_form" :"提交表單",
+        "notice": "您的 ID 將被安全存儲，並在我們確認您的身份後 30 天內刪除。我們可能會使用值得信賴的服務提供商來幫助審核您的信息。"
+    },  
+    "screen_4":{
+        "title": "正在審核中，等待審核",
+        "submission_id": "提交ID",
+        "accepted": "已接受",
+        "submission_received": "提交内容已收到",
+        "we_received": "我们今天收到了您提交的内容",
+        "reviewing": "正在审核",
+        "we_are_reviewing": "我们正在审核您提交的内容",
+        "waiting_for_decision": "等待决定",
+        "you_will_receive": "一旦我们做出决定,您将收到一封电子邮件"
+    }
+}

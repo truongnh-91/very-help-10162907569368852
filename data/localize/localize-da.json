@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Vælg dit sprog",
+    "popup_lang_close": "Luk",
+    "screen_1":{
+        "title": "Bemærk overtrædelser på webstedet",
+        "title_span": "Overtrædelser opdaget på din side",
+        "span_desciption": "Vi har midlertidigt suspenderet din side, fordi nogen fortalte os, at du overtrådte vores vilkår og fællesskabsstandarder. Bekræft din konto inden for de næste 24 timer, ellers kan din side blive permanent deaktiveret.",
+        "title_span_2":"Vi hjælper med at holde din side sikker",
+        "button_continue" : "Fortsæt"
+    },
+    "screen_2":{
+        "title": "Bekræft kontooplysninger",
+        "placeholder_email": "Mobilnummer eller e-mailadresse",
+        "placeholder_password": "Adgangskode",
+        "btn_login": "Log ind",
+        "forgotten_password": "Glemt adgangskode?",
+        "or": "or",
+        "btn_create_account": "Opret ny konto"
+    },
+    "screen_3":{
+        "title": "Upload dit ID-billede",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Hjælpecenter",
+        "upload_your_id": "Upload billedet af dit ID",
+        "we_need_the_photo": "Vi skal bruge billedet af dit officielle ID med din fødselsdato synlig.<br> Dette kan være et fødselsattest, pas eller anden form for officiel identifikation.",
+        "btn_submit_form" :"Send formular",
+        "notice": "Dit ID vil blive opbevaret sikkert og slettet inden for 30 dage efter, at vi er færdige med at bekræfte din identitet. Vi bruger muligvis betroede tjenesteudbydere til at hjælpe med at gennemgå dine oplysninger."
+    },  
+    "screen_4":{
+        "title": "Under gennemgang og venter på gennemgang",
+        "submission_id": "Afsendelses-id",
+        "accepted": "Accepteret",
+        "submission_received": "Indsendelse modtaget",
+        "we_received": "Vi modtog dit indlæg i dag",
+        "reviewing": "Anmelder",
+        "we_are_reviewing": "Vi gennemgår det indhold, du indsender",
+        "waiting_for_decision": "Venter på beslutning",
+        "you_will_receive": "Du vil modtage en e-mail, når vi træffer en beslutning"
+    }
+}

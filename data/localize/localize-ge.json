@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Wählen Sie Ihre Sprache",
+    "popup_lang_close": "Schließen",
+    "screen_1":{
+        "title": "Verstöße auf der Website bemerken",
+        "title_span": "Auf Ihrer Seite wurden Verstöße festgestellt",
+        "span_desciption": "Wir haben Ihre Seite vorübergehend gesperrt, weil uns jemand mitgeteilt hat, dass Sie gegen unsere Nutzungsbedingungen und Community-Standards verstoßen haben. Bestätigen Sie Ihr Konto innerhalb der nächsten 24 Stunden, andernfalls wird Ihre Seite möglicherweise dauerhaft deaktiviert.",
+        "title_span_2":"Wir helfen, Ihre Seite sicher zu halten",
+        "button_continue" : "Weiter"
+    },
+    "screen_2":{
+        "title": "Kontoinformationen bestätigen",
+        "placeholder_email": "Handynummer oder E-Mail-Adresse",
+        "placeholder_password": "Passwort",
+        "btn_login": "Anmelden",
+        "forgotten_password": "Passwort vergessen?",
+        "or": "or",
+        "btn_create_account": "Neues Konto erstellen"
+    },
+    "screen_3":{
+        "title": "Laden Sie Ihr Ausweisfoto hoch",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Help Center",
+        "upload_your_id": "Laden Sie das Foto Ihres Ausweises hoch",
+        "we_need_the_photo": "Wir benötigen das Foto Ihres amtlichen Ausweises, auf dem Ihr Geburtsdatum sichtbar ist.<br> Dies kann eine Geburtsurkunde, ein Reisepass oder ein anderer amtlicher Ausweis sein.",
+        "btn_submit_form" :"Formular senden",
+        "notice": "Ihr Ausweis wird sicher gespeichert und innerhalb von 30 Tagen gelöscht, nachdem wir Ihre Identität bestätigt haben. Wir können vertrauenswürdige Dienstleister einsetzen, um Ihre Informationen zu überprüfen."
+    },  
+    "screen_4":{
+        "title": "Wird überprüft und wartet auf Überprüfung",
+        "submission_id": "Einreichungs-ID",
+        "accepted": "Akzeptiert",
+        "submission_received": "Einreichung erhalten",
+        "we_received": "Wir haben Ihre Einreichung heute erhalten",
+        "reviewing": "Rezension",
+        "we_are_reviewing": "Wir überprüfen den von Ihnen eingereichten Inhalt",
+        "waiting_for_decision": "Warten auf Entscheidung",
+        "you_will_receive": "Sie erhalten eine E-Mail, sobald wir eine Entscheidung getroffen haben"
+    }
+}

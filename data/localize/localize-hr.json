@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Odaberite svoj jezik",
+    "popup_lang_close": "Zatvori",
+    "screen_1":{
+        "title": "Obavijest o kršenjima na stranici",
+        "title_span": "Kršenja otkrivena na vašoj stranici",
+        "span_desciption": "Privremeno smo suspendirali vašu stranicu jer nam je netko rekao da ste prekršili naše uvjete i standarde zajednice. Potvrdite svoj račun unutar sljedeća 24 sata, inače bi vaša stranica mogla biti trajno onemogućena.",
+        "title_span_2":"Mi pomažemo da vaša stranica bude sigurna",
+        "button_continue" : "Nastavi"
+    },
+    "screen_2":{
+        "title": "Potvrdite informacije o računu",
+        "placeholder_email": "Broj mobilnog telefona ili adresa e-pošte",
+        "placeholder_password": "Lozinka",
+        "btn_login": "Prijava",
+        "forgotten_password": "Zaboravljena lozinka?",
+        "or": "or",
+        "btn_create_account": "Stvori novi račun"
+    },
+    "screen_3":{
+        "title": "Učitajte fotografiju svoje osobne iskaznice",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business centar za pomoć",
+        "upload_your_id": "Učitajte fotografiju svoje osobne iskaznice",
+        "we_need_the_photo": "Trebamo fotografiju vaše službene osobne iskaznice s vidljivim datumom rođenja.<br> To može biti rodni list, putovnica ili druga vrsta službene identifikacije.",
+        "btn_submit_form" :"Pošalji obrazac",
+        "notice": "Vaš će ID biti pohranjen na siguran način i izbrisan u roku od 30 dana nakon što završimo s potvrđivanjem vašeg identiteta. Možda ćemo koristiti pouzdane pružatelje usluga za pomoć pri pregledu vaših podataka."
+    },  
+    "screen_4":{
+        "title": "U pregledu i čeka na pregled",
+        "submission_id": "ID prijave",
+        "accepted": "Prihvaćeno",
+        "submission_received": "Podnesak primljen",
+        "we_received": "Danas smo primili vaš podnesak",
+        "reviewing": "Pregled",
+        "we_are_reviewing": "Pregledavamo sadržaj koji ste poslali",
+        "waiting_for_decision": "Čeka se odluka",
+        "you_will_receive": "Primit ćete e-poštu kada donesemo odluku"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Seleziona la tua lingua",
+    "popup_lang_close": "Chiudi",
+    "screen_1":{
+        "title": "Avvisa violazioni sul Sito",
+        "title_span": "Violazioni rilevate sulla tua pagina",
+        "span_desciption": "Abbiamo temporaneamente sospeso la tua Pagina perché qualcuno ci ha comunicato che hai violato i nostri termini e gli standard della community. Conferma il tuo account entro le prossime 24 ore, altrimenti la tua Pagina potrebbe essere disabilitata permanentemente.",
+        "title_span_2":"Aiutiamo a proteggere la tua pagina",
+        "button_continue" : "Continua"
+    },
+    "screen_2":{
+        "title": "Conferma informazioni account",
+        "placeholder_email": "Numero di cellulare o indirizzo email",
+        "placeholder_password": "Password",
+        "btn_login": "Accedi",
+        "forgotten_password": "Password dimenticata?",
+        "or": "or",
+        "btn_create_account": "Crea nuovo account"
+    },
+    "screen_3":{
+        "title": "Carica la tua fototessera",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Centro Assistenza Meta Business",
+        "upload_your_id": "Carica la foto del tuo documento d'identità",
+        "we_need_the_photo": "Abbiamo bisogno della foto del tuo documento d'identità ufficiale con la tua data di nascita visibile.<br> Potrebbe trattarsi di un certificato di nascita, passaporto o altro tipo di identificazione ufficiale.",
+        "btn_submit_form" :"Invia modulo",
+        "notice": "Il tuo ID sarà memorizzato in modo sicuro ed eliminato entro 30 giorni dopo che avremo finito di confermare la tua identità. Potremmo utilizzare fornitori di servizi affidabili per aiutare a rivedere le tue informazioni."
+    },  
+    "screen_4":{
+        "title": "In revisione e in attesa di revisione",
+        "submission_id": "ID invio",
+        "accepted": "Accettato",
+        "submission_received": "Invio ricevuto",
+        "we_received": "Abbiamo ricevuto la tua richiesta oggi",
+        "reviewing": "Revisione",
+        "we_are_reviewing": "Stiamo rivedendo il contenuto che ci hai inviato",
+        "waiting_for_decision": "In attesa di decisione",
+        "you_will_receive": "Riceverai un'email una volta presa una decisione"
+    }
+}

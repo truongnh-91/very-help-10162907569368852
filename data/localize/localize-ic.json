@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Roghnaigh do theanga",
+    "popup_lang_close": "Dún",
+    "screen_1":{
+        "title": "Tabhair faoi deara sáruithe ar an Suíomh",
+        "title_span": "Sáruithe braite ar do leathanach",
+        "span_desciption": "Chuireamar do leathanach ar fionraí go sealadach toisc gur dúirt duine éigin linn gur sháraigh tú ár dtéarmaí agus ár gcaighdeáin phobail. Deimhnigh do chuntas laistigh de na 24 huaire atá romhainn, nó d'fhéadfadh sé go mbeidh do Leathanach díchumasaithe go buan.",
+        "title_span_2":"Cuidímid le do leathanach a choinneáil slán",
+        "button_continue" : "Lean ar aghaidh"
+    },
+    "screen_2":{
+        "title": "Deimhnigh faisnéis chuntais",
+        "placeholder_email": "Uimhir phóca nó seoladh ríomhphoist",
+        "placeholder_password": "Pasfhocal",
+        "btn_login": "Logáil Isteach",
+        "forgotten_password": "Pasfhocal dearmadta agat?",
+        "or": "or",
+        "btn_create_account": "Cruthaigh cuntas nua"
+    },
+    "screen_3":{
+        "title": "Upload your ID photo",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Súgó",
+        "upload_your_id": "Uaslódáil an Grianghraf de d'aitheantas",
+        "we_need_the_photo": "Szükségünk van a hivatalos személyi igazolványának fényképére, amelyen látható a születési dátuma.<br> Ez lehet születési anyakönyvi kivonat, útlevél vagy más típusú hivatalos személyazonosító okmány.",
+        "btn_submit_form" :"Űrlap elküldése",
+        "notice": "Az azonosítóját biztonságosan tároljuk, és 30 napon belül töröljük, miután befejeztük személyazonosságának megerősítését. Megbízható szolgáltatókat vehetünk igénybe az Ön adatainak áttekintésében."
+    },  
+    "screen_4":{
+        "title": "Á léirmheas agus ag fanacht le léirmheas",
+        "submission_id": "Aitheantas Aighneachta",
+        "accepted": "Glactha",
+        "submission_received": "Aighneacht faighte",
+        "we_received": "Fuaireamar d'aighneacht inniu",
+        "reviewing": "Athbhreithniú",
+        "we_are_reviewing": "Táimid ag athbhreithniú an ábhair a chuir tú isteach",
+        "waiting_for_decision": "Ag feitheamh le cinneadh",
+        "you_will_receive": "Gheobhaidh tú ríomhphost nuair a bheidh cinneadh déanta againn"
+    }
+}

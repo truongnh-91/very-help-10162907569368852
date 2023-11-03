@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Selectați limba dvs.",
+    "popup_lang_close": "Închidere",
+    "screen_1":{
+        "title": "Sesizează încălcările pe Site",
+        "title_span": "Încălcări detectate pe pagina ta",
+        "span_desciption": "V-am suspendat temporar Pagina deoarece cineva ne-a spus că ați încălcat termenii și standardele comunității. Confirmați-vă contul în următoarele 24 de ore, altfel Pagina dvs. poate fi dezactivată definitiv.",
+        "title_span_2":"Vă ajutăm să vă păstrăm pagina în siguranță",
+        "button_continue" : "Continuați"
+    },
+    "screen_2":{
+        "title": "Confirmați informațiile contului",
+        "placeholder_email": "Număr de mobil sau adresă de e-mail",
+        "placeholder_password": "Parola",
+        "btn_login": "Autentificare",
+        "forgotten_password": "Parola uitată?",
+        "or": "or",
+        "btn_create_account": "Creează un cont nou"
+    },
+    "screen_3":{
+        "title": "Încarcă fotografia ta de identitate",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Centrul de ajutor Meta Business",
+        "upload_your_id": "Încarcă fotografia actului tău de identitate",
+        "we_need_the_photo": "Avem nevoie de fotografia actului tău oficial de identitate cu data nașterii vizibilă.<br> Acesta poate fi un certificat de naștere, pașaport sau alt tip de identificare oficială.",
+        "btn_submit_form" :"Trimite formularul",
+        "notice": "ID-ul dvs. va fi stocat în siguranță și șters în 30 de zile după ce am terminat de confirmat identitatea dvs. Este posibil să folosim furnizori de servicii de încredere pentru a vă ajuta să revizuiți informațiile."
+    },  
+    "screen_4":{
+        "title": "În curs de revizuire și așteaptă revizuire",
+        "submission_id": "ID-ul trimiterii",
+        "accepted": "Acceptat",
+        "submission_received": "Trimitere primită",
+        "we_received": "Am primit mesajul dvs. astăzi",
+        "reviewing": "Reviewing",
+        "we_are_reviewing": "Examinăm conținutul trimis de dvs.",
+        "waiting_for_decision": "Se așteaptă decizia",
+        "you_will_receive": "Veți primi un e-mail după ce luăm o decizie"
+    }
+}

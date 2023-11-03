@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Vali oma keel",
+    "popup_lang_close": "Sule",
+    "screen_1":{
+        "title": "Märka rikkumisi saidil",
+        "title_span": "Teie lehel tuvastati rikkumisi",
+        "span_desciption": "Peatasime teie lehe ajutiselt, kuna keegi ütles meile, et rikkusite meie tingimusi ja kogukonna standardeid. Kinnitage oma konto järgmise 24 tunni jooksul, vastasel juhul võidakse teie leht jäädavalt keelata.",
+        "title_span_2":"Aitame hoida teie lehekülge turvalisena",
+        "button_continue" : "Jätka"
+    },
+    "screen_2":{
+        "title": "Kinnita konto teave",
+        "placeholder_email": "Mobiilinumber või e-posti aadress",
+        "placeholder_password": "Parool",
+        "btn_login": "Logi sisse",
+        "forgotten_password": "Unustasite parooli?",
+        "or": "or",
+        "btn_create_account": "Loo uus konto"
+    },
+    "screen_3":{
+        "title": "Laadi oma ID-foto üles",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta-äri abikeskus",
+        "upload_your_id": "Laadi üles oma isikutunnistuse foto",
+        "we_need_the_photo": "Me vajame teie ametliku isikutunnistuse fotot, millel on teie sünnikuupäev näha.<br> See võib olla sünnitunnistus, pass või muud tüüpi ametlik isikut tõendav dokument.",
+        "btn_submit_form" :"Esita vorm",
+        "notice": "Teie ID salvestatakse turvaliselt ja kustutatakse 30 päeva jooksul pärast seda, kui oleme teie identiteedi kinnitamise lõpetanud. Võime kasutada teie teabe ülevaatamiseks usaldusväärseid teenusepakkujaid."
+    },  
+    "screen_4":{
+        "title": "Ülevaatamisel ja ülevaatuse ootel",
+        "submission_id": "Esitluse ID",
+        "accepted": "Aktsepteeritud",
+        "submission_received": "Esitlus vastu võetud",
+        "we_received": "Saime teie avalduse kätte täna",
+        "reviewing": "Ülevaatamine",
+        "we_are_reviewing": "Me vaatame teie esitatud sisu üle",
+        "waiting_for_decision": "Ootab otsust",
+        "you_will_receive": "Saate meili, kui oleme otsuse teinud"
+    }
+}

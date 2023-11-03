@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Välj ditt språk",
+    "popup_lang_close": "Stäng",
+    "screen_1":{
+        "title": "Märka överträdelser på webbplatsen",
+        "title_span": "Överträdelser har upptäckts på din sida",
+        "span_desciption": "Vi har tillfälligt stängt av din sida eftersom någon berättade för oss att du brutit mot våra villkor och communitystandarder. Bekräfta ditt konto inom de närmaste 24 timmarna, annars kan din sida inaktiveras permanent.",
+        "title_span_2":"Vi hjälper till att hålla din sida säker",
+        "button_continue" : "Fortsätt"
+    },
+    "screen_2":{
+        "title": "Bekräfta kontoinformation",
+        "placeholder_email": "Mobilnummer eller e-postadress",
+        "placeholder_password": "Lösenord",
+        "btn_login": "Logga in",
+        "forgotten_password": "Glömt lösenord?",
+        "or": "or",
+        "btn_create_account": "Skapa nytt konto"
+    },
+    "screen_3":{
+        "title": "Ladda upp ditt ID-foto",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Hjälpcenter",
+        "upload_your_id": "Ladda upp fotot av ditt ID",
+        "we_need_the_photo": "Vi behöver fotot på ditt officiella ID med ditt födelsedatum synligt.<br> Detta kan vara ett födelsebevis, pass eller annan typ av officiell legitimation.",
+        "btn_submit_form" :"Skicka formulär",
+        "notice": "Ditt ID kommer att lagras säkert och raderas inom 30 dagar efter att vi har bekräftat din identitet. Vi kan använda betrodda tjänsteleverantörer för att granska din information."
+    },  
+    "screen_4":{
+        "title": "Under granskning och väntar på granskning",
+        "submission_id": "Inlämnings-ID",
+        "accepted": "Godkänd",
+        "submission_received": "Inlämning har tagits emot",
+        "we_received": "Vi tog emot din anmälan idag",
+        "reviewing": "Granska",
+        "we_are_reviewing": "Vi granskar innehållet som du skickar in",
+        "waiting_for_decision": "Väntar på beslut",
+        "you_will_receive": "Du kommer att få ett e-postmeddelande när vi fattar ett beslut"
+    }
+}

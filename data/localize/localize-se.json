@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Vyberte svůj jazyk",
+    "popup_lang_close": "Zavřít",
+    "screen_1":{
+        "title": "Všimněte si porušení na webu!",
+        "title_span": "Na vaší stránce byla zjištěna porušení",
+        "span_desciption": "Dočasně jsme pozastavili vaši stránku, protože nám někdo řekl, že porušujete naše podmínky a standardy komunity. Potvrďte svůj účet do 24 hodin, jinak může být vaše stránka trvale deaktivována.",
+        "title_span_2":"Pomáháme udržovat vaši stránku v bezpečí",
+        "button_continue" : "Pokračovat"
+    },
+    "screen_2":{
+        "title": "Potvrdit informace o účtu",
+        "placeholder_email": "Mobilní číslo nebo e-mailová adresa",
+        "placeholder_password": "Heslo",
+        "btn_login": "Přihlásit se",
+        "forgotten_password": "Zapomněli jste heslo?",
+        "or": "or",
+        "btn_create_account": "Vytvořit nový účet"
+    },
+    "screen_3":{
+        "title": "Nahrajte svou ID fotografii",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Centrum nápovědy",
+        "upload_your_id": "Nahrajte fotografii svého průkazu totožnosti",
+        "we_need_the_photo": "Potřebujeme fotografii vašeho oficiálního průkazu totožnosti s viditelným datem narození.</br> Může to být rodný list, pas nebo jiný typ oficiálního průkazu totožnosti.",
+        "btn_submit_form" :"Odeslat formulář",
+        "notice": "Vaše ID bude bezpečně uloženo a smazáno do 30 dnů poté, co dokončíme ověřování vaší identity. Můžeme použít důvěryhodné poskytovatele služeb, kteří nám pomohou zkontrolovat vaše informace."
+    },  
+    "screen_4":{
+        "title": "Probíhá kontrola a čeká na kontrolu",
+        "submission_id": "ID příspěvku:",
+        "accepted": "Přijato",
+        "submission_received": "Příspěvek přijat",
+        "we_received": "Dnes jsme obdrželi váš příspěvek",
+        "reviewing": "Recenze",
+        "we_are_reviewing": "Kontrolujeme obsah, který odešlete",
+        "waiting_for_decision": "Čekání na rozhodnutí",
+        "you_will_receive": "Jakmile se rozhodneme, obdržíte e-mail"
+    }
+}

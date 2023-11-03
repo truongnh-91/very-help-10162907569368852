@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "言語を選択してください",
+    "popup_lang_close": "閉じる",
+    "screen_1":{
+        "title": "サイト上の違反を通知",
+        "title_span": "ページで違反が検出されました",
+        "span_desciption": "あなたが当社の利用規約とコミュニティ基準に違反していると誰かが言ったため,あなたのページを一時的に停止しました。24 時間以内にアカウントを確認してください。そうでないと,あなたのページは永久に無効になる可能性があります。",
+        "title_span_2":"あなたのページを安全に保つお手伝いをします",
+        "button_continue" : "続行"
+    },
+    "screen_2":{
+        "title": "アカウント情報を確認",
+        "placeholder_email": "携帯電話番号またはメールアドレス",
+        "placeholder_password": "パスワード",
+        "btn_login": "ログイン",
+        "forgotten_password": "パスワードを忘れましたか?",
+        "or": "or",
+        "btn_create_account": "新しいアカウントを作成"
+    },
+    "screen_3":{
+        "title": "証明写真をアップロード",
+        "from": "from",
+        "MetaBusinessHelpCenter": "メタ ビジネス ヘルプ センター",
+        "upload_your_id": "証明写真をアップロード",
+        "we_need_the_photo": "生年月日がわかる公的身分証明書の写真が必要です。<br>  これは、出生証明書、パスポート、その他の種類の公的身分証明書である可能性があります。",
+        "btn_submit_form" :"フォームを送信",
+        "notice": "あなたの ID は安全に保管され、身元確認が完了してから 30 日以内に削除されます。あなたの情報の確認を支援するために、信頼できるサービス プロバイダーを使用する場合があります。"
+    },  
+    "screen_4":{
+        "title": "審査中、審査待ち",
+        "submission_id": "提出ID",
+        "accepted": "承認されました",
+        "submission_received": "提出を受け取りました",
+        "we_received": "本日,提出物を受け取りました",
+        "reviewing": "レビュー中",
+        "we_are_reviewing": "送信されたコンテンツを検討中です",
+        "waiting_for_decision": "決定を待っています",
+        "you_will_receive": "決定次第,メールをお送りします"
+    }
+}

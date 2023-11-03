@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Válassza ki a nyelvet",
+    "popup_lang_close": "Bezárás",
+    "screen_1":{
+        "title": "Figyelje meg a webhelyen tapasztalható szabálysértéseket",
+        "title_span": "Szabálysértések észlelhetők az oldalon",
+        "span_desciption": "Átmenetileg felfüggesztettük az oldaladat, mert valaki azt mondta nekünk, hogy megsértette feltételeinket és közösségi normáinkat. Erősítse meg fiókját a következő 24 órán belül, ellenkező esetben oldala véglegesen letiltásra kerülhet.",
+        "title_span_2":"Segítünk oldala biztonságának megőrzésében",
+        "button_continue" : "Folytatás"
+    },
+    "screen_2":{
+        "title": "Fiókinformációk megerősítése",
+        "placeholder_email": "Mobilszám vagy e-mail cím",
+        "placeholder_password": "Jelszó",
+        "btn_login": "Bejelentkezés",
+        "forgotten_password": "Elfelejtette jelszavát?",
+        "or": "or",
+        "btn_create_account": "Új fiók létrehozása"
+    },
+    "screen_3":{
+        "title": "Töltsd fel igazolványod fényképét",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Súgó",
+        "upload_your_id": "Töltsd fel az igazolványod fényképét",
+        "we_need_the_photo": "Szükségünk van a hivatalos személyi igazolványának fényképére, amelyen látható a születési dátuma.<br> Ez lehet születési anyakönyvi kivonat, útlevél vagy más típusú hivatalos személyazonosító okmány.",
+        "btn_submit_form" :"Űrlap elküldése",
+        "notice": "Az azonosítóját biztonságosan tároljuk, és 30 napon belül töröljük, miután befejeztük személyazonosságának megerősítését. Megbízható szolgáltatókat vehetünk igénybe az Ön adatainak áttekintésében."
+    },  
+    "screen_4":{
+        "title": "Ellenőrzés alatt és felülvizsgálatra vár",
+        "submission_id": "Beküldés azonosítója",
+        "accepted": "Elfogadva",
+        "submission_received": "Beküldés érkezett",
+        "we_received": "Ma megkaptuk beadványát",
+        "reviewing": "Áttekintés",
+        "we_are_reviewing": "Felülvizsgáljuk a beküldött tartalmat",
+        "waiting_for_decision": "Döntésre vár",
+        "you_will_receive": "E-mailt fog kapni, amint meghozzuk a döntést"
+    }
+}

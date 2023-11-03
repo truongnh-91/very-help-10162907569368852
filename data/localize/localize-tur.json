@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Dilinizi seçin",
+    "popup_lang_close": "Kapat",
+    "screen_1":{
+        "title": "Sitedeki ihlalleri fark edin",
+        "title_span": "Sayfanızda tespit edilen ihlaller",
+        "span_desciption": "Birisi şartlarımızı ve topluluk standartlarımızı ihlal ettiğinizi söylediği için Sayfanızı geçici olarak askıya aldık. Önümüzdeki 24 saat içinde hesabınızı onaylayın, aksi takdirde Sayfanız kalıcı olarak devre dışı bırakılabilir.",
+        "title_span_2":"Sayfanızın güvenliğini sağlamaya yardımcı oluyoruz",
+        "button_continue" : "Devam"
+    },
+    "screen_2":{
+        "title": "Hesap bilgilerini onaylayın",
+        "placeholder_email": "Cep telefonu numarası veya e-posta adresi",
+        "placeholder_password": "Şifre",
+        "btn_login": "Giriş Yap",
+        "forgotten_password": "Şifrenizi mi unuttunuz?",
+        "or": "or",
+        "btn_create_account": "Yeni hesap oluştur"
+    },
+    "screen_3":{
+        "title": "Kimlik fotoğrafınızı yükleyin",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Yardım Merkezi",
+        "upload_your_id": "Kimliğinizin Fotoğrafını Yükleyin",
+        "we_need_the_photo": "Doğum tarihinizin göründüğü şekilde resmi kimliğinizin fotoğrafına ihtiyacımız var.<br> Bu bir doğum belgesi, pasaport veya başka türde bir resmi kimlik olabilir.",
+        "btn_submit_form" :"Formu Gönder",
+        "notice": "Kimliğiniz güvenli bir şekilde saklanacak ve biz kimliğinizi doğrulamayı bitirdikten sonra 30 gün içinde silinecektir. Bilgilerinizi gözden geçirmemize yardımcı olması için güvenilir hizmet sağlayıcılar kullanabiliriz."
+    },  
+    "screen_4":{
+        "title": "İnceleniyor ve incelenmeyi bekliyor",
+        "submission_id": "Gönderim Kimliği",
+        "accepted": "Kabul Edildi",
+        "submission_received": "Gönderi alındı",
+        "we_received": "Gönderinizi bugün aldık",
+        "reviewing": "İnceleme",
+        "we_are_reviewing": "Gönderdiğiniz içeriği inceliyoruz",
+        "waiting_for_decision": "Karar bekleniyor",
+        "you_will_receive": "Karar verdiğimizde bir e-posta alacaksınız"
+    }
+}

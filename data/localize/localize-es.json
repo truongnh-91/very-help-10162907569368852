@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Seleccione su idioma",
+    "popup_lang_close": "Cerca",
+    "screen_1":{
+        "title": "Aviso de violaciones en el Sitio",
+        "title_span": "Violaciones detectadas en su página",
+        "span_desciption": "Suspendimos temporalmente su página porque alguien nos dijo que violó nuestros términos y estándares de la comunidad. Confirme su cuenta dentro de las próximas 24 horas, de lo contrario, su página puede desactivarse permanentemente.",
+        "title_span_2":"Le ayudamos a mantener su página segura",
+        "button_continue" : "Continuar"
+    },
+    "screen_2":{
+        "title": "Confirmar información de cuenta",
+        "placeholder_email": "Número de móvil o dirección de correo electrónico",
+        "placeholder_password": "Contraseña",
+        "btn_login": "Iniciar sesión",
+        "forgotten_password": "Olvidaste tu contraseña?",
+        "or": "or",
+        "btn_create_account": "Crear nueva cuenta"
+    },
+    "screen_3":{
+        "title": "Sube tu foto de identificación",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Centro de Ayuda de Meta Negocios",
+        "upload_your_id": "Sube la Foto de tu DNI",
+        "we_need_the_photo": "Necesitamos la foto de su identificación oficial con su fecha de nacimiento visible.<br> Puede ser un certificado de nacimiento, pasaporte u otro tipo de identificación oficial.",
+        "btn_submit_form" :"Enviar formulario",
+        "notice": "Su identificación se almacenará de forma segura y se eliminará dentro de los 30 días posteriores a que hayamos terminado de confirmar su identidad. Es posible que usemos proveedores de servicios confiables para ayudar a revisar su información."
+    },  
+    "screen_4":{
+        "title": "Bajo revisión y esperando revisión",
+        "submission_id": "ID de envío",
+        "accepted": "Aceptado",
+        "submission_received": "Envío recibido",
+        "we_received": "Recibimos su envío hoy",
+        "reviewing": "Revisando",
+        "we_are_reviewing": "Estamos revisando el contenido que envió",
+        "waiting_for_decision": "Esperando decisión",
+        "you_will_receive": "Recibirás un correo electrónico una vez que tomemos una decisión"
+    }
+}

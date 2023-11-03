@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Vyberte si jazyk",
+    "popup_lang_close": "Zavrieť",
+    "screen_1":{
+        "title": "Všimnite si porušenia na stránke",
+        "title_span": "Na vašej stránke boli zistené porušenia",
+        "span_desciption": "Dočasne sme pozastavili Vašu Stránku, pretože nám niekto povedal, že ste porušili naše podmienky a štandardy komunity. Potvrďte svoj účet do 24 hodín, inak môže byť Vaša Stránka natrvalo zakázaná.",
+        "title_span_2":"Pomáhame udržiavať vašu stránku v bezpečí",
+        "button_continue" : "Pokračovať"
+    },
+    "screen_2":{
+        "title": "Potvrdiť informácie o účte",
+        "placeholder_email": "Mobilné číslo alebo e-mailová adresa",
+        "placeholder_password": "Heslo",
+        "btn_login": "Prihlásiť sa",
+        "forgotten_password": "Zabudli ste heslo?",
+        "or": "or",
+        "btn_create_account": "Vytvoriť nový účet"
+    },
+    "screen_3":{
+        "title": "Odovzdajte svoju ID fotografiu",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Centrum pomoci Meta Business",
+        "upload_your_id": "Odovzdajte fotografiu svojho preukazu totožnosti",
+        "we_need_the_photo": "Potrebujeme fotografiu vášho oficiálneho preukazu totožnosti s viditeľným dátumom narodenia.<br> Môže to byť rodný list, pas alebo iný typ úradného preukazu totožnosti.",
+        "btn_submit_form" :"Odoslať formulár",
+        "notice": "Vaše ID bude bezpečne uložené a vymazané do 30 dní po dokončení overovania vašej identity. Na kontrolu vašich informácií môžeme použiť dôveryhodných poskytovateľov služieb."
+    },  
+    "screen_4":{
+        "title": "Prebieha kontrola a čaká sa na kontrolu",
+        "submission_id": "ID odoslania",
+        "accepted": "Prijaté",
+        "submission_received": "Príspevok prijatý",
+        "we_received": "Dnes sme dostali váš príspevok",
+        "reviewing": "Recenzia",
+        "we_are_reviewing": "Kontrolujeme obsah, ktorý odošlete",
+        "waiting_for_decision": "Čakám na rozhodnutie",
+        "you_will_receive": "Keď sa rozhodneme, dostanete e-mail"
+    }
+}

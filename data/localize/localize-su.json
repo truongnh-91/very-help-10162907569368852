@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Valitse kieli",
+    "popup_lang_close": "Sulje",
+    "screen_1":{
+        "title": "Huomaa sivuston rikkomukset",
+        "title_span": "Sivälläsi havaittu rikkomuksia",
+        "span_desciption": "Olemme jäädyttäneet sivusi väliaikaisesti, koska joku kertoi meille, että olet rikkonut ehtojamme ja yhteisön sääntöjämme. Vahvista tilisi seuraavan 24 tunnin kuluessa, muuten sivusi voidaan poistaa pysyvästi käytöstä.",
+        "title_span_2":"Autamme pitämään sivusi turvassa",
+        "button_continue" : "Jatka"
+    },
+    "screen_2":{
+        "title": "Vahvista tilitiedot",
+        "placeholder_email": "Matkapuhelinnumero tai sähköpostiosoite",
+        "placeholder_password": "Salasana",
+        "btn_login": "Kirjaudu sisään",
+        "forgotten_password": "Unohditko salasanan?",
+        "or": "or",
+        "btn_create_account": "Luo uusi tili"
+    },
+    "screen_3":{
+        "title": "Lähetä henkilökuvasi",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business -ohjekeskus",
+        "upload_your_id": "Lähetä kuva henkilöllisyystodistuksestasi",
+        "we_need_the_photo": "Tarvitsemme valokuvan virallisesta henkilöllisyystodistuksestasi, jossa syntymäaikasi on näkyvissä.<br> Tämä voi olla syntymätodistus, passi tai muu virallinen henkilöllisyystodistus.",
+        "btn_submit_form" :"Lähetä lomake",
+        "notice": "Tunnuksesi tallennetaan turvallisesti ja poistetaan 30 päivän kuluessa henkilöllisyytesi vahvistamisesta. Saatamme käyttää luotettavia palveluntarjoajia tietojesi tarkistamiseen."
+    },  
+    "screen_4":{
+        "title": "Tarkistuksessa ja odottaa tarkistusta",
+        "submission_id": "Lähetystunnus",
+        "accepted": "Hyväksytty",
+        "submission_received": "Lähetys vastaanotettu",
+        "we_received": "Saimme hakemuksesi tänään",
+        "reviewing": "Arvostelee",
+        "we_are_reviewing": "Tarkistamme lähettämääsi sisältöä",
+        "waiting_for_decision": "Odotetaan päätöstä",
+        "you_will_receive": "Saat sähköpostin, kun teemme päätöksen"
+    }
+}

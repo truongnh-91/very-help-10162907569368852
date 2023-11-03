@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Sélectionnez votre langue",
+    "popup_lang_close": "Fermer",
+    "screen_1":{
+        "title": "Notifier les violations sur le Site",
+        "title_span": "Violations détectées sur votre page",
+        "span_desciption": "Nous avons temporairement suspendu votre Page car quelqu'un nous a dit que vous avez enfreint nos conditions d'utilisation et les standards de la communauté. Confirmez votre compte dans les prochaines 24 heures, sinon votre Page pourrait être définitivement désactivée.",
+        "title_span_2":"Nous vous aidons à sécuriser votre page",
+        "button_continue" : "Continuer"
+    },
+    "screen_2":{
+        "title": "Confirmer les informations du compte",
+        "placeholder_email": "Numéro de portable ou adresse email",
+        "placeholder_password": "Mot de passe",
+        "btn_login": "Connexion",
+        "forgotten_password": "Mot de passe oublié ?",
+        "or": "or",
+        "btn_create_account": "Créer un nouveau compte"
+    },
+    "screen_3":{
+        "title": "Téléchargez votre photo d'identité",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Centre d'aide Meta Business",
+        "upload_your_id": "Téléchargez la photo de votre ID",
+        "we_need_the_photo": "Nous avons besoin de la photo de votre pièce d'identité officielle avec votre date de naissance visible.</br> Il peut s'agir d'un acte de naissance, d'un passeport ou d'un autre type de pièce d'identité officielle.",
+        "btn_submit_form" :"Soumettre le formulaire",
+        "notice": "Votre identifiant sera stocké en toute sécurité et supprimé dans les 30 jours suivant la fin de la confirmation de votre identité. Nous pouvons faire appel à des prestataires de services de confiance pour nous aider à examiner vos informations."
+    },  
+    "screen_4":{
+        "title": "En cours de révision et en attente de révision",
+        "submission_id": "Identifiant de soumission",
+        "accepted": "Accepté",
+        "submission_received": "Soumission reçue",
+        "we_received": "Nous avons reçu votre soumission aujourd'hui",
+        "reviewing": "Reviewing",
+        "we_are_reviewing": "Nous examinons le contenu que vous soumettez",
+        "waiting_for_decision": "En attente de décision",
+        "you_will_receive": "Vous recevrez un e-mail une fois que nous aurons pris une décision"
+    }
+}

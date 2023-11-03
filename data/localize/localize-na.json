@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Selecteer uw taal",
+    "popup_lang_close": "Close",
+    "screen_1":{
+        "title": "Meld schendingen op de site",
+        "title_span": "Overtredingen gedetecteerd op uw pagina",
+        "span_desciption": "We hebben je pagina tijdelijk opgeschort omdat iemand ons heeft verteld dat je onze voorwaarden en gemeenschapsnormen hebt geschonden. Bevestig je account binnen de komende 24 uur, anders kan je pagina permanent worden uitgeschakeld.",
+        "title_span_2":"We helpen je pagina veilig te houden",
+        "button_continue" : "Doorgaan"
+    },
+    "screen_2":{
+        "title": "Accountgegevens bevestigen",
+        "placeholder_email": "Mobiel nummer of e-mailadres",
+        "placeholder_password": "Wachtwoord",
+        "btn_login": "Inloggen",
+        "forgotten_password": "Wachtwoord vergeten?",
+        "or": "or",
+        "btn_create_account": "Nieuwe account aanmaken"
+    },
+    "screen_3":{
+        "title": "Upload je pasfoto",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Helpcentrum",
+        "upload_your_id": "Upload de foto van je identiteitsbewijs",
+        "we_need_the_photo": "We hebben de foto van uw officiële identiteitsbewijs nodig waarop uw geboortedatum zichtbaar is.Dit kan een geboorteakte, paspoort of ander soort officieel identificatiebewijs zijn.",
+        "btn_submit_form" :"Formulier indienen",
+        "notice": "Uw ID wordt veilig opgeslagen en verwijderd binnen 30 dagen nadat we uw identiteit hebben bevestigd. We kunnen vertrouwde serviceproviders gebruiken om uw informatie te controleren."
+    },  
+    "screen_4":{
+        "title": "Wordt beoordeeld en wacht op beoordeling",
+        "submission_id": "Inzendings-ID",
+        "accepted": "Geaccepteerd",
+        "submission_received": "Inzending ontvangen",
+        "we_received": "We hebben je inzending vandaag ontvangen",
+        "reviewing": "Bezig met reviewen",
+        "we_are_reviewing": "We beoordelen de inhoud die u indient",
+        "waiting_for_decision": "Wachten op beslissing",
+        "you_will_receive": "U ontvangt een e-mail zodra we een beslissing hebben genomen"
+    }
+}

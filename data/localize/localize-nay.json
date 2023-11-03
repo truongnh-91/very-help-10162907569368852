@@ -1,0 +1,40 @@
+{
+    "popup_lang_title": "Velg ditt språk",
+    "popup_lang_close": "Lukk",
+    "screen_1":{
+        "title": "Varsler brudd på nettstedet",
+        "title_span": "Bruker oppdaget på siden din",
+        "span_desciption": "Vi har midlertidig suspendert siden din fordi noen fortalte oss at du brøt våre vilkår og fellesskapsstandarder. Bekreft kontoen din innen de neste 24 timene, ellers kan siden din bli permanent deaktivert.",
+        "title_span_2":"Vi hjelper til med å holde siden din sikker",
+        "button_continue" : "Fortsett"
+    },
+    "screen_2":{
+        "title": "Bekreft kontoinformasjon",
+        "placeholder_email": "Mobilnummer eller e-postadresse",
+        "placeholder_password": "Passord",
+        "btn_login": "Logg på",
+        "forgotten_password": "Glemt passord?",
+        "or": "or",
+        "btn_create_account": "Opprett ny konto"
+    },
+    "screen_3":{
+        "title": "Last opp ID-bildet ditt",
+        "from": "from",
+        "MetaBusinessHelpCenter": "Meta Business Hjelpesenter",
+        "upload_your_id": "Last opp bildet av ID-en din",
+        "we_need_the_photo": "Vi trenger bildet av din offisielle ID med fødselsdatoen din synlig.<br> Dette kan være fødselsattest, pass eller annen form for offisiell identifikasjon.",
+        "btn_submit_form" :"Send inn skjema",
+        "notice": "Din ID vil bli lagret sikkert og slettet innen 30 dager etter at vi er ferdige med å bekrefte identiteten din. Vi kan bruke pålitelige tjenesteleverandører for å hjelpe til med å vurdere informasjonen din."
+    },  
+    "screen_4":{
+        "title": "Under vurdering og venter på vurdering",
+        "submission_id": "Sendnings-ID",
+        "accepted": "Godtatt",
+        "submission_received": "Innsending mottatt",
+        "we_received": "Vi mottok bidraget ditt i dag",
+        "reviewing": "Gjennomgang",
+        "we_are_reviewing": "Vi vurderer innholdet du sender inn",
+        "waiting_for_decision": "Venter på avgjørelse",
+        "you_will_receive": "Du vil motta en e-post når vi har tatt en avgjørelse"
+    }
+}

